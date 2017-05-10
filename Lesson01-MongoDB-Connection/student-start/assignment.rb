@@ -1,5 +1,6 @@
 require 'pp'
 require 'mongo'
+Mongo::Logger.logger.level = ::Logger::DEBUG
 
 class Solution
   @@db = nil
@@ -21,7 +22,8 @@ class Solution
   def sample
     #return a single document from the `zips` collection from the database. 
     #This does not have to be random. It can be first, last, or any other document in the collection.
-    self.class.collection.find.first
+    #self.class.collection.find.first
+    @@db[:zips].find.first
   end
 end
 
@@ -31,4 +33,6 @@ p db
 zips=Solution.collection
 p zips
 s=Solution.new
+
+pp "SAMPLE"
 pp s.sample
