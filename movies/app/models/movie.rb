@@ -23,8 +23,8 @@ class Movie
 
   embeds_many :roles, class_name:"MovieRole"
   embeds_many :directors, class_name:"DirectorRef"
-  has_and_belongs_to_many :writers
-  has_one :sequel, foreign_key: :sequel_of, class_name:"Movie"
+  has_and_belongs_to_many :writers, dependent: :restrict
+  has_one :sequel, foreign_key: :sequel_of, class_name:"Movie", dependent: :restrict
   belongs_to :sequel_to, foreign_key: :sequel_of, class_name:"Movie"
 
   before_destroy do |doc|

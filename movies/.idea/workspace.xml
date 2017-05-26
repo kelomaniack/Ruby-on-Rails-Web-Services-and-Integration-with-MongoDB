@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="71076a6a-b620-4d09-82fe-fdbb715d7c0b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zips/.idea/.generators" afterPath="$PROJECT_DIR$/../zips/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zips/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../zips/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zips/.idea/zips.iml" afterPath="$PROJECT_DIR$/../zips/.idea/zips.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zips/Gemfile" afterPath="$PROJECT_DIR$/../zips/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zips/Gemfile.lock" afterPath="$PROJECT_DIR$/../zips/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/movie.rb" afterPath="$PROJECT_DIR$/app/models/movie.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -36,38 +32,18 @@
       <file leaf-file-name="director.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/director.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="228">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <file leaf-file-name="macros.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/mongoid-5.0.2/lib/mongoid/validatable/macros.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="movies.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/movies.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="places.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/places.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+            <state relative-caret-position="1041">
+              <caret line="88" column="10" lean-forward="false" selection-start-line="88" selection-start-column="10" selection-end-line="88" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -75,16 +51,6 @@
       </file>
       <file leaf-file-name="actor.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/actor.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="measurement.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/measurement.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -103,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="place.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="place.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/place.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -113,11 +79,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movie.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="movie.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="494">
+              <caret line="26" column="84" lean-forward="false" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="writer.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/writer.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="movie_role.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/movie_role.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -129,6 +115,8 @@
     <findStrings>
       <find>mongo</find>
       <find>05018</find>
+      <find>writer</find>
+      <find>can't be blank</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,6 +126,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/models/movie.rb" />
       </list>
     </option>
   </component>
@@ -168,6 +157,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -314,9 +305,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -579,7 +568,8 @@
       <workItem from="1495609776346" duration="708000" />
       <workItem from="1495611558409" duration="1236000" />
       <workItem from="1495615164634" duration="472000" />
-      <workItem from="1495640756710" duration="5000" />
+      <workItem from="1495640756710" duration="231000" />
+      <workItem from="1495782570908" duration="3617000" />
     </task>
     <task id="LOCAL-00001" summary="Added movies project">
       <created>1495609824336</created>
@@ -592,7 +582,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6579000" />
+    <option name="totallyTimeSpent" value="10422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1310" height="1337" extended-state="0" />
@@ -633,38 +623,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/place.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/mongoid.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/movies.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -950,14 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/movies.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -978,14 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/actor.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1014,7 +956,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/director.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/place.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1022,10 +964,174 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/place.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/movie_role.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/actor.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/mongoid-5.0.2/lib/mongoid/validatable/macros.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1041">
+          <caret line="88" column="10" lean-forward="false" selection-start-line="88" selection-start-column="10" selection-end-line="88" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1555">
+            <caret line="1440" column="58" lean-forward="false" selection-start-line="1440" selection-start-column="44" selection-end-line="1440" selection-end-column="58" />
+            <folding>
+              <marker date="1468792571000" expanded="true" signature="1981:2164" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="3659:4523" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="3726:3876" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="3784:3870" ph="case ... end" />
+              <marker date="1468792571000" expanded="true" signature="3929:4010" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="4106:4165" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="4262:4351" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="4268:4345" ph="case ... end" />
+              <marker date="1468792571000" expanded="true" signature="4431:4519" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="4436:4513" ph="case ... end" />
+              <marker date="1468792571000" expanded="true" signature="6102:6461" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="6171:6192" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="7984:8304" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="8277:8304" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="9625:9691" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="10019:10079" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="10483:10543" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="11223:11538" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="13190:13810" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="15123:15206" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="15596:15696" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="15721:15819" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="20406:20489" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="23887:24005" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="24224:24410" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="28808:29036" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="29549:29802" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="29609:29684" ph="##..." />
+              <marker date="1468792571000" expanded="true" signature="29696:29796" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="29750:29790" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="30610:30710" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="30664:30704" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="30870:30922" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="31764:31798" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="31819:31871" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="32703:32858" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="35683:35849" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="35874:35982" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="36207:36220" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="39045:39103" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="39128:39186" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="42871:42967" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="46233:46400" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="46426:46460" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="47785:47922" ph="do ... end" />
+              <marker date="1468792571000" expanded="true" signature="47939:48075" ph="do ... end" />
+              <marker date="1468792571000" expanded="true" signature="48106:48213" ph="do ... end" />
+              <marker date="1468792571000" expanded="true" signature="48230:48336" ph="do ... end" />
+              <marker date="1468792571000" expanded="true" signature="48729:49244" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="48910:49244" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="49026:49244" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="49196:49244" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="50398:50496" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="51047:51560" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="51474:51560" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="51876:52226" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="54650:54749" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="56733:56799" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="58201:58300" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="59822:59888" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="61217:61316" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="63750:63849" ph="for ... end" />
+              <marker date="1468792571000" expanded="true" signature="65628:65802" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="66082:66142" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="66650:66779" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="66854:66914" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="67616:67958" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="67636:67958" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="67786:67915" ph="##..." />
+              <marker date="1468792571000" expanded="true" signature="67938:67958" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="70182:70558" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="70705:70726" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="71481:71700" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="71529:71690" ph="do ... end" />
+              <marker date="1468792571000" expanded="true" signature="71553:71678" ph="case ... end" />
+              <marker date="1468792571000" expanded="true" signature="72008:72080" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="72151:72217" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="72737:72794" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="73539:73611" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="74449:74521" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="74591:74657" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="75490:75709" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="76775:76828" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="76900:76998" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="76948:76988" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="77197:77338" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="77596:77816" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="77644:77806" ph="do ... end" />
+              <marker date="1468792571000" expanded="true" signature="77668:77794" ph="case ... end" />
+              <marker date="1468792571000" expanded="true" signature="78231:78505" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="79652:80335" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="82078:82513" ph=" ... end" />
+              <marker date="1468792571000" expanded="true" signature="82126:82503" ph="do ... end" />
+              <marker date="1468792571000" expanded="true" signature="82150:82491" ph="case ... end" />
+              <marker date="1468792571000" expanded="true" signature="82448:82462" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="82715:82775" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="83639:83690" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="83965:84027" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="84615:84627" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="84679:84700" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="84752:84793" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="84779:84792" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="84872:84885" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="84930:84962" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="84948:84961" ph="{ ... }" />
+              <marker date="1468792571000" expanded="true" signature="85520:85544" ph="do ... end" />
+              <marker date="1468792571000" expanded="true" signature="86964:87136" ph="..." />
+              <marker date="1468792571000" expanded="true" signature="86984:87128" ph="..." />
+              <marker date="1468792571000" expanded="true" signature="87038:87105" ph="..." />
+              <marker date="1468792571000" expanded="true" signature="87298:87400" ph="..." />
+              <marker date="1468792571000" expanded="true" signature="87407:87505" ph="..." />
+              <marker date="1468792571000" expanded="true" signature="87512:87607" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/director.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/writer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="84" lean-forward="false" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
           <folding />
         </state>
       </provider>
