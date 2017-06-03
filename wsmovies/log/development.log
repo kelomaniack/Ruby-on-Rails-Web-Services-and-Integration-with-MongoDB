@@ -366,3 +366,324 @@ movies#show
 response.etag="1fb43fe7f4014eef7a22d07a8dcc3c51"
   Rendered movies/show.json.jbuilder (0.6ms)
 Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/actors" for ::1 at 2017-06-03 20:20:31 +0200
+Processing by ActorsController#index as HTML
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000479s
+  Rendered actors/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 88ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/actors/new" for ::1 at 2017-06-03 20:20:33 +0200
+Processing by ActorsController#new as HTML
+  Rendered actors/_form.html.erb (2.9ms)
+  Rendered actors/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/actors" for ::1 at 2017-06-03 20:20:45 +0200
+Processing by ActorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UnYcOLWsIMwCl14j3YugsnIAFybzrKDosvD0sqCO/Eu1kWFB7bbNMAbncWIEiz21S865AFoDG2/Mqeu53LrScA==", "actor"=>{"name"=>" Sylvester Stallone"}, "commit"=>"Create Actor"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `split' for #<Actor:0x007fa9ede2e340>):
+  app/models/actor.rb:17:in `name='
+  app/controllers/actors_controller.rb:27:in `new'
+  app/controllers/actors_controller.rb:27:in `create'
+
+
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.1ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (81.6ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (189.8ms)
+
+
+Started GET "/actors/100.json" for ::1 at 2017-06-03 20:22:36 +0200
+Processing by ActorsController#show as JSON
+  Parameters: {"id"=>"100"}
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"100"}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000491s
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms)
+
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document(s) not found for class Actor with id(s) 100.
+summary:
+  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 100 ... (1 total) and the following ids were not found: 100.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/actors_controller.rb:67:in `set_actor'
+
+
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.7ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (181.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/actors/100.json" for ::1 at 2017-06-03 20:25:24 +0200
+Processing by ActorsController#show as JSON
+  Parameters: {"id"=>"100"}
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"100"}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.00043400000000000003s
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document(s) not found for class Actor with id(s) 100.
+summary:
+  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 100 ... (1 total) and the following ids were not found: 100.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/actors_controller.rb:67:in `set_actor'
+
+
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.1ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (176.4ms)
+
+
+Started GET "/actors/100.json" for ::1 at 2017-06-03 20:26:05 +0200
+Processing by ActorsController#show as JSON
+  Parameters: {"id"=>"100"}
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"100"}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000607s
+Completed 404 Not Found in 58ms (ActiveRecord: 0.0ms)
+
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document(s) not found for class Actor with id(s) 100.
+summary:
+  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 100 ... (1 total) and the following ids were not found: 100.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/actors_controller.rb:67:in `set_actor'
+
+
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.6ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (71.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (180.1ms)
+
+
+Started GET "/actors/100.json" for ::1 at 2017-06-03 20:26:36 +0200
+Processing by ActorsController#show as JSON
+  Parameters: {"id"=>"100"}
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"100"}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000407s
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document(s) not found for class Actor with id(s) 100.
+summary:
+  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 100 ... (1 total) and the following ids were not found: 100.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/actors_controller.rb:67:in `set_actor'
+
+
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.2ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (68.8ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (160.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/actors/100.json" for ::1 at 2017-06-03 20:38:53 +0200
+Processing by ActorsController#show as JSON
+  Parameters: {"id"=>"100"}
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"100"}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000694s
+Completed 404 Not Found in 114ms (ActiveRecord: 0.0ms)
+
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document(s) not found for class Actor with id(s) 100.
+summary:
+  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 100 ... (1 total) and the following ids were not found: 100.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/actors_controller.rb:67:in `set_actor'
+
+
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (214.0ms)
+
+
+Started POST "/actors" for ::1 at 2017-06-03 20:39:05 +0200
+Processing by ActorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTYZ+IoVKPDEycSIT6C79hoMRyTG2gecMbj0V4JkX4na0WSB0g/FDMC568mWoCbxI8LpAm91vBtP4etc/lBxsg==", "actor"=>{"name"=>" Sylvester Stallone"}, "commit"=>"Create Actor"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `split' for #<Actor:0x007fea4b456540>):
+  app/models/actor.rb:17:in `name='
+  app/controllers/actors_controller.rb:27:in `new'
+  app/controllers/actors_controller.rb:27:in `create'
+
+
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.0ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (179.8ms)
+
+
+Started POST "/actors" for ::1 at 2017-06-03 20:40:04 +0200
+Processing by ActorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTYZ+IoVKPDEycSIT6C79hoMRyTG2gecMbj0V4JkX4na0WSB0g/FDMC568mWoCbxI8LpAm91vBtP4etc/lBxsg==", "actor"=>{"name"=>" Sylvester Stallone"}, "commit"=>"Create Actor"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `split' for #<Actor:0x007fea48e18a90>):
+  app/models/actor.rb:17:in `name='
+  app/controllers/actors_controller.rb:27:in `new'
+  app/controllers/actors_controller.rb:27:in `create'
+
+
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.8ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (79.6ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (177.1ms)
+
+
+Started GET "/actors/nm0000006.json" for ::1 at 2017-06-03 20:41:45 +0200
+Processing by ActorsController#show as JSON
+  Parameters: {"id"=>"nm0000006"}
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"nm0000006"}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.0009170000000000001s
+  Rendered actors/show.json.jbuilder (20.2ms)
+Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/actors" for ::1 at 2017-06-03 20:41:54 +0200
+Processing by ActorsController#index as HTML
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.006026s
+MONGODB | localhost:27017 | wsmovies_development.getMore | STARTED | {"getMore"=>55351517520, "collection"=>"actors"}
+MONGODB | localhost:27017 | wsmovies_development.getMore | SUCCEEDED | 0.16523s
+  Rendered actors/index.html.erb within layouts/application (414.6ms)
+Completed 200 OK in 1091ms (Views: 1090.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/actors" for ::1 at 2017-06-03 20:41:55 +0200
+Processing by ActorsController#index as HTML
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.010222s
+MONGODB | localhost:27017 | wsmovies_development.getMore | STARTED | {"getMore"=>52156659118, "collection"=>"actors"}
+MONGODB | localhost:27017 | wsmovies_development.getMore | SUCCEEDED | 0.040333999999999995s
+  Rendered actors/index.html.erb within layouts/application (330.1ms)
+Completed 200 OK in 359ms (Views: 358.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/actors/nm0000336" for ::1 at 2017-06-03 20:42:00 +0200
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"nm0000336"}
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"nm0000336"}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000754s
+  Rendered actors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/actors" for ::1 at 2017-06-03 20:42:01 +0200
+Processing by ActorsController#index as HTML
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.004411s
+MONGODB | localhost:27017 | wsmovies_development.getMore | STARTED | {"getMore"=>54400527632, "collection"=>"actors"}
+MONGODB | localhost:27017 | wsmovies_development.getMore | SUCCEEDED | 0.037452s
+  Rendered actors/index.html.erb within layouts/application (266.9ms)
+Completed 200 OK in 324ms (Views: 323.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/actors/nm0000006.v2json" for ::1 at 2017-06-03 20:42:36 +0200
+Processing by ActorsController#show as V2JSON
+  Parameters: {"id"=>"nm0000006"}
+MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"nm0000006"}}
+MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000819s
+  Rendered actors/show.v2json.jbuilder (0.5ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.0ms)
