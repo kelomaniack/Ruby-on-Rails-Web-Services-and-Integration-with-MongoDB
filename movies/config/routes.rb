@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'hello/sayhello'
+
+  get 'hello/all'
+
+  get 'hello/sayhello'
+
+  get 'hello/sayhello'
+
+  get 'hello/sayhello'
+
   resources :movies do
     resources :movie_roles, as: :role, path: "roles"
   end
