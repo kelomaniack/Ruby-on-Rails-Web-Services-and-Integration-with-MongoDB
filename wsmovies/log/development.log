@@ -1,1242 +1,621 @@
-
-
-Started GET "/hello/sayhello.json" for ::1 at 2017-06-03 19:40:37 +0200
-Processing by HelloController#sayhello as JSON
-  Rendered hello/sayhello.json.jbuilder (23.6ms)
-Completed 200 OK in 143ms (Views: 114.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/hello/sayhello.xml" for ::1 at 2017-06-03 19:51:31 +0200
-Processing by HelloController#sayhello as XML
-  Rendered hello/sayhello.xml.builder (407.5ms)
-Completed 200 OK in 474ms (Views: 474.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/hello/sayhello.txt" for ::1 at 2017-06-03 19:54:16 +0200
-Processing by HelloController#sayhello as TEXT
-  Rendered hello/sayhello.text.raw (0.3ms)
-Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/hello/sayhello.json" for ::1 at 2017-06-03 19:57:35 +0200
-Processing by HelloController#sayhello as JSON
-  Rendered hello/sayhello.json.jbuilder (0.2ms)
-Completed 200 OK in 38ms (Views: 37.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/hello/say/hello.json" for ::1 at 2017-06-03 20:00:18 +0200
-Processing by HelloController#say as JSON
-  Parameters: {"something"=>"hello"}
-  Rendered hello/sayhello.json.jbuilder (0.1ms)
-Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/hello/say/goodbye.xml" for ::1 at 2017-06-03 20:01:20 +0200
-Processing by HelloController#say as XML
-  Parameters: {"something"=>"goodbye"}
-  Rendered hello/saygoodbye.xml.builder (0.6ms)
-Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/hello/say/badword" for ::1 at 2017-06-03 20:01:49 +0200
-Processing by HelloController#say as */*
-  Parameters: {"something"=>"badword"}
-  Rendered text template (0.0ms)
-Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/hello/say/mmm" for ::1 at 2017-06-03 20:02:18 +0200
-Processing by HelloController#say as */*
-  Parameters: {"something"=>"mmm"}
-  Rendered text template (0.0ms)
-Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/movies/12345.json" for ::1 at 2017-06-03 20:05:31 +0200
-Processing by MoviesController#show as JSON
-  Parameters: {"id"=>"12345"}
 MONGODB | Adding localhost:27017 to the cluster.
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12345"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.031301s
-Completed 404 Not Found in 185ms (ActiveRecord: 0.0ms)
-
-Mongoid::Errors::DocumentNotFound (
-message:
-  Document(s) not found for class Movie with id(s) 12345.
-summary:
-  When calling Movie.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 12345 ... (1 total) and the following ids were not found: 12345.
-resolution:
-  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
-  app/controllers/movies_controller.rb:90:in `set_movie'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (116.9ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (90.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (196.9ms)
-
-
-Started GET "/movies/59312ddf545fde04e22811c0.json" for ::1 at 2017-06-03 20:06:22 +0200
-Processing by MoviesController#show as JSON
-  Parameters: {"id"=>"59312ddf545fde04e22811c0"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>BSON::ObjectId('59312ddf545fde04e22811c0')}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000387s
-Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms)
-
-Mongoid::Errors::DocumentNotFound (
-message:
-  Document(s) not found for class Movie with id(s) 59312ddf545fde04e22811c0.
-summary:
-  When calling Movie.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 59312ddf545fde04e22811c0 ... (1 total) and the following ids were not found: 59312ddf545fde04e22811c0.
-resolution:
-  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
-  app/controllers/movies_controller.rb:90:in `set_movie'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.9ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (69.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (157.2ms)
-
-
-Started GET "/movies/59314ded545fde1cd0e44cef.json" for ::1 at 2017-06-03 20:07:27 +0200
-Processing by MoviesController#show as JSON
-  Parameters: {"id"=>"59314ded545fde1cd0e44cef"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>BSON::ObjectId('59314ded545fde1cd0e44cef')}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000451s
-Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
-
-Mongoid::Errors::DocumentNotFound (
-message:
-  Document(s) not found for class Movie with id(s) 59314ded545fde1cd0e44cef.
-summary:
-  When calling Movie.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 59314ded545fde1cd0e44cef ... (1 total) and the following ids were not found: 59314ded545fde1cd0e44cef.
-resolution:
-  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
-  app/controllers/movies_controller.rb:90:in `set_movie'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (165.6ms)
-
-
-Started GET "/movies" for ::1 at 2017-06-03 20:07:37 +0200
-Processing by MoviesController#index as HTML
-index.params={"controller"=>"movies", "action"=>"index"}
-sliced.params={}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000762s
-  Rendered movies/index.html.erb within layouts/application (4.1ms)
-Completed 200 OK in 5836ms (Views: 5835.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/assets/directors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-06-03 20:07:43 +0200
-
-
-Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2017-06-03 20:07:43 +0200
-
-
-Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2017-06-03 20:07:43 +0200
-
-
-Started GET "/assets/hello.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-06-03 20:07:43 +0200
-
-
-Started GET "/assets/scaffolds.self-f0d26f5a107f4432bd4aa7926831f7f1458ffd17c36dd4a48a995c6c8514d43b.css?body=1" for ::1 at 2017-06-03 20:07:43 +0200
-
-
-Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2017-06-03 20:07:43 +0200
-
-
-Started GET "/assets/directors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-03 20:07:43 +0200
-
-
-Started GET "/assets/hello.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-03 20:07:43 +0200
-  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
-  [1m[35m (0.1ms)[0m  select sqlite_version(*)
-  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
-  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
-
-
-Started GET "/movies/59312ddf545fde04e22811c0.json" for ::1 at 2017-06-03 20:08:56 +0200
-Processing by MoviesController#show as JSON
-  Parameters: {"id"=>"59312ddf545fde04e22811c0"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>BSON::ObjectId('59312ddf545fde04e22811c0')}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000409s
-Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms)
-
-Mongoid::Errors::DocumentNotFound (
-message:
-  Document(s) not found for class Movie with id(s) 59312ddf545fde04e22811c0.
-summary:
-  When calling Movie.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 59312ddf545fde04e22811c0 ... (1 total) and the following ids were not found: 59312ddf545fde04e22811c0.
-resolution:
-  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
-  app/controllers/movies_controller.rb:90:in `set_movie'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (75.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (170.1ms)
-
-
-Started GET "/movies/tt0086879.json" for ::1 at 2017-06-03 20:11:20 +0200
-Processing by MoviesController#show as JSON
-  Parameters: {"id"=>"tt0086879"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"tt0086879"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.00041700000000000005s
-Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
-
-Mongoid::Errors::DocumentNotFound (
-message:
-  Document(s) not found for class Movie with id(s) tt0086879.
-summary:
-  When calling Movie.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): tt0086879 ... (1 total) and the following ids were not found: tt0086879.
-resolution:
-  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
-  app/controllers/movies_controller.rb:90:in `set_movie'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (81.7ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (173.1ms)
-
-
-Started GET "/movies/new" for ::1 at 2017-06-03 20:11:44 +0200
-Processing by MoviesController#new as HTML
-  Rendered movies/_form.html.erb (49.1ms)
-  Rendered movies/new.html.erb within layouts/application (68.1ms)
-Completed 200 OK in 130ms (Views: 129.5ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/movies" for ::1 at 2017-06-03 20:11:52 +0200
-Processing by MoviesController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Ubq3gGAzBVU7Dk2e5yrIS2zCohiYCQ6ZPrf14Be7wwGoZenWZoh6VCcFneinDYmFH2krsvPn70ao8Dc/GrBNw==", "movie"=>{"title"=>"Last of the Mochicans"}, "commit"=>"Create Movie"}
-create.params={"utf8"=>"✓", "authenticity_token"=>"4Ubq3gGAzBVU7Dk2e5yrIS2zCohiYCQ6ZPrf14Be7wwGoZenWZoh6VCcFneinDYmFH2krsvPn70ao8Dc/GrBNw==", "movie"=>{"title"=>"Last of the Mochicans"}, "commit"=>"Create Movie", "controller"=>"movies", "action"=>"create"}
-create.movie_params={"title"=>"Last of the Mochicans"}
-MONGODB | localhost:27017 | wsmovies_development.insert | STARTED | {"insert"=>"movies", "documents"=>[{"_id"=>BSON::ObjectId('5932fbe83970a8608c000000'), "title"=>"Last of the Mochicans", "updated_at"=>2017-06-03 18:11:52 UTC, "created_at"=>2017-06-03 18:11:52 UTC}], "ordered"=>true}
-MONGODB | localhost:27017 | wsmovies_development.insert | SUCCEEDED | 0.702985s
-  Couldn't find template for digesting: movies/create
-Redirected to http://localhost:3000/movies/5932fbe83970a8608c000000
-Completed 302 Found in 775ms (ActiveRecord: 0.0ms)
-
-
-Started GET "/movies/5932fbe83970a8608c000000" for ::1 at 2017-06-03 20:11:53 +0200
-Processing by MoviesController#show as HTML
-  Parameters: {"id"=>"5932fbe83970a8608c000000"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>BSON::ObjectId('5932fbe83970a8608c000000')}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.021641s
-movies#show
-  Cache digest for app/views/movies/show.html.erb: af15479b9bbaae495dd9ad27a03d5451
-response.etag="988d25bd54b2adb962b2c0a66d5d2cec"
-  Rendered movies/show.html.erb within layouts/application (1.1ms)
-Completed 200 OK in 92ms (Views: 38.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/movies" for ::1 at 2017-06-03 20:11:55 +0200
-Processing by MoviesController#index as HTML
-index.params={"controller"=>"movies", "action"=>"index"}
-sliced.params={}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.046916s
-  Rendered movies/index.html.erb within layouts/application (49.7ms)
-Completed 200 OK in 106ms (Views: 105.1ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movie_accesses", "filter"=>{"movie_id"=>"12347", "action"=>"show-stale"}, "projection"=>{"created_at"=>1, "action"=>1}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.0022979999999999997s
+MONGODB | IOError
 MONGODB | Adding localhost:27017 to the cluster.
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"title"=>"Last of the Mochicans"}, "singleBatch"=>true}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.025185s
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movie_accesses", "filter"=>{"movie_id"=>"12347", "action"=>"show-stale"}, "projection"=>{"created_at"=>1, "action"=>1}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00078s
 
 
-Started GET "/movies/5932fbe83970a8608c000000.json" for ::1 at 2017-06-03 20:14:54 +0200
-Processing by MoviesController#show as JSON
-  Parameters: {"id"=>"5932fbe83970a8608c000000"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>BSON::ObjectId('5932fbe83970a8608c000000')}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000528s
-movies#show
-  Cache digest for app/views/actors/_actor.json.jbuilder: 02b5e0a4bf22c4e753d957ac19ea7557
-  Cache digest for app/views/movies/show.json.jbuilder: 0bbe8346657da4b76ba82dc6365b0339
-response.etag="1fb43fe7f4014eef7a22d07a8dcc3c51"
-  Rendered movies/show.json.jbuilder (0.8ms)
-Completed 200 OK in 42ms (Views: 10.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/movies/5932fbe83970a8608c000000.json" for ::1 at 2017-06-03 20:15:58 +0200
-Processing by MoviesController#show as JSON
-  Parameters: {"id"=>"5932fbe83970a8608c000000"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>BSON::ObjectId('5932fbe83970a8608c000000')}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.00048300000000000003s
-movies#show
-  Cache digest for app/views/actors/_actor.json.jbuilder: 02b5e0a4bf22c4e753d957ac19ea7557
-  Cache digest for app/views/movies/show.json.jbuilder: 0bbe8346657da4b76ba82dc6365b0339
-response.etag="1fb43fe7f4014eef7a22d07a8dcc3c51"
-  Rendered movies/show.json.jbuilder (0.4ms)
-Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/movies/5932fbe83970a8608c000000.json" for ::1 at 2017-06-03 20:16:11 +0200
-Processing by MoviesController#show as JSON
-  Parameters: {"id"=>"5932fbe83970a8608c000000"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>BSON::ObjectId('5932fbe83970a8608c000000')}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.0005099999999999999s
-movies#show
-  Cache digest for app/views/actors/_actor.json.jbuilder: 02b5e0a4bf22c4e753d957ac19ea7557
-  Cache digest for app/views/movies/show.json.jbuilder: 0bbe8346657da4b76ba82dc6365b0339
-response.etag="1fb43fe7f4014eef7a22d07a8dcc3c51"
-  Rendered movies/show.json.jbuilder (0.5ms)
-Completed 200 OK in 16ms (Views: 8.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/movies/5932fbe83970a8608c000000.json" for ::1 at 2017-06-03 20:16:21 +0200
-Processing by MoviesController#show as JSON
-  Parameters: {"id"=>"5932fbe83970a8608c000000"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>BSON::ObjectId('5932fbe83970a8608c000000')}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.00044500000000000003s
-movies#show
-  Cache digest for app/views/actors/_actor.json.jbuilder: 02b5e0a4bf22c4e753d957ac19ea7557
-  Cache digest for app/views/movies/show.json.jbuilder: 0bbe8346657da4b76ba82dc6365b0339
-response.etag="1fb43fe7f4014eef7a22d07a8dcc3c51"
-  Rendered movies/show.json.jbuilder (0.5ms)
-Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/movies/5932fbe83970a8608c000000.json" for ::1 at 2017-06-03 20:16:43 +0200
-Processing by MoviesController#show as JSON
-  Parameters: {"id"=>"5932fbe83970a8608c000000"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>BSON::ObjectId('5932fbe83970a8608c000000')}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000478s
-movies#show
-  Cache digest for app/views/actors/_actor.json.jbuilder: 02b5e0a4bf22c4e753d957ac19ea7557
-  Cache digest for app/views/movies/show.json.jbuilder: 0bbe8346657da4b76ba82dc6365b0339
-response.etag="1fb43fe7f4014eef7a22d07a8dcc3c51"
-  Rendered movies/show.json.jbuilder (0.5ms)
-Completed 200 OK in 19ms (Views: 10.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/movies/5932fbe83970a8608c000000.json" for ::1 at 2017-06-03 20:16:55 +0200
-Processing by MoviesController#show as JSON
-  Parameters: {"id"=>"5932fbe83970a8608c000000"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>BSON::ObjectId('5932fbe83970a8608c000000')}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000495s
-movies#show
-  Cache digest for app/views/actors/_actor.json.jbuilder: 02b5e0a4bf22c4e753d957ac19ea7557
-  Cache digest for app/views/movies/show.json.jbuilder: 0bbe8346657da4b76ba82dc6365b0339
-response.etag="1fb43fe7f4014eef7a22d07a8dcc3c51"
-  Rendered movies/show.json.jbuilder (0.6ms)
-Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/actors" for ::1 at 2017-06-03 20:20:31 +0200
-Processing by ActorsController#index as HTML
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000479s
-  Rendered actors/index.html.erb within layouts/application (2.8ms)
-Completed 200 OK in 88ms (Views: 78.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/actors/new" for ::1 at 2017-06-03 20:20:33 +0200
-Processing by ActorsController#new as HTML
-  Rendered actors/_form.html.erb (2.9ms)
-  Rendered actors/new.html.erb within layouts/application (7.2ms)
-Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/actors" for ::1 at 2017-06-03 20:20:45 +0200
-Processing by ActorsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UnYcOLWsIMwCl14j3YugsnIAFybzrKDosvD0sqCO/Eu1kWFB7bbNMAbncWIEiz21S865AFoDG2/Mqeu53LrScA==", "actor"=>{"name"=>" Sylvester Stallone"}, "commit"=>"Create Actor"}
-Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
-
-NoMethodError (undefined method `split' for #<Actor:0x007fa9ede2e340>):
-  app/models/actor.rb:17:in `name='
-  app/controllers/actors_controller.rb:27:in `new'
-  app/controllers/actors_controller.rb:27:in `create'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.1ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (81.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (189.8ms)
-
-
-Started GET "/actors/100.json" for ::1 at 2017-06-03 20:22:36 +0200
-Processing by ActorsController#show as JSON
-  Parameters: {"id"=>"100"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"100"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000491s
-Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms)
-
-Mongoid::Errors::DocumentNotFound (
-message:
-  Document(s) not found for class Actor with id(s) 100.
-summary:
-  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 100 ... (1 total) and the following ids were not found: 100.
-resolution:
-  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
-  app/controllers/actors_controller.rb:67:in `set_actor'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.7ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (181.0ms)
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-
-
-Started GET "/actors/100.json" for ::1 at 2017-06-03 20:25:24 +0200
-Processing by ActorsController#show as JSON
-  Parameters: {"id"=>"100"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"100"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.00043400000000000003s
-Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
-
-Mongoid::Errors::DocumentNotFound (
-message:
-  Document(s) not found for class Actor with id(s) 100.
-summary:
-  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 100 ... (1 total) and the following ids were not found: 100.
-resolution:
-  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
-  app/controllers/actors_controller.rb:67:in `set_actor'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.1ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (176.4ms)
-
-
-Started GET "/actors/100.json" for ::1 at 2017-06-03 20:26:05 +0200
-Processing by ActorsController#show as JSON
-  Parameters: {"id"=>"100"}
-MONGODB | Adding localhost:27017 to the cluster.
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"100"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000607s
-Completed 404 Not Found in 58ms (ActiveRecord: 0.0ms)
-
-Mongoid::Errors::DocumentNotFound (
-message:
-  Document(s) not found for class Actor with id(s) 100.
-summary:
-  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 100 ... (1 total) and the following ids were not found: 100.
-resolution:
-  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
-  app/controllers/actors_controller.rb:67:in `set_actor'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (71.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (180.1ms)
-
-
-Started GET "/actors/100.json" for ::1 at 2017-06-03 20:26:36 +0200
-Processing by ActorsController#show as JSON
-  Parameters: {"id"=>"100"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"100"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000407s
-Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
-
-Mongoid::Errors::DocumentNotFound (
-message:
-  Document(s) not found for class Actor with id(s) 100.
-summary:
-  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 100 ... (1 total) and the following ids were not found: 100.
-resolution:
-  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
-  app/controllers/actors_controller.rb:67:in `set_actor'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (68.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (160.8ms)
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-
-
-Started GET "/actors/100.json" for ::1 at 2017-06-03 20:38:53 +0200
-Processing by ActorsController#show as JSON
-  Parameters: {"id"=>"100"}
-MONGODB | Adding localhost:27017 to the cluster.
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"100"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000694s
-Completed 404 Not Found in 114ms (ActiveRecord: 0.0ms)
-
-Mongoid::Errors::DocumentNotFound (
-message:
-  Document(s) not found for class Actor with id(s) 100.
-summary:
-  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 100 ... (1 total) and the following ids were not found: 100.
-resolution:
-  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
-  app/controllers/actors_controller.rb:67:in `set_actor'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (214.0ms)
-
-
-Started POST "/actors" for ::1 at 2017-06-03 20:39:05 +0200
-Processing by ActorsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTYZ+IoVKPDEycSIT6C79hoMRyTG2gecMbj0V4JkX4na0WSB0g/FDMC568mWoCbxI8LpAm91vBtP4etc/lBxsg==", "actor"=>{"name"=>" Sylvester Stallone"}, "commit"=>"Create Actor"}
-Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
-
-NoMethodError (undefined method `split' for #<Actor:0x007fea4b456540>):
-  app/models/actor.rb:17:in `name='
-  app/controllers/actors_controller.rb:27:in `new'
-  app/controllers/actors_controller.rb:27:in `create'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.0ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (179.8ms)
-
-
-Started POST "/actors" for ::1 at 2017-06-03 20:40:04 +0200
-Processing by ActorsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTYZ+IoVKPDEycSIT6C79hoMRyTG2gecMbj0V4JkX4na0WSB0g/FDMC568mWoCbxI8LpAm91vBtP4etc/lBxsg==", "actor"=>{"name"=>" Sylvester Stallone"}, "commit"=>"Create Actor"}
-Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
-
-NoMethodError (undefined method `split' for #<Actor:0x007fea48e18a90>):
-  app/models/actor.rb:17:in `name='
-  app/controllers/actors_controller.rb:27:in `new'
-  app/controllers/actors_controller.rb:27:in `create'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (79.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (177.1ms)
-
-
-Started GET "/actors/nm0000006.json" for ::1 at 2017-06-03 20:41:45 +0200
-Processing by ActorsController#show as JSON
-  Parameters: {"id"=>"nm0000006"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"nm0000006"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.0009170000000000001s
-  Rendered actors/show.json.jbuilder (20.2ms)
-Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/actors" for ::1 at 2017-06-03 20:41:54 +0200
-Processing by ActorsController#index as HTML
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.006026s
-MONGODB | localhost:27017 | wsmovies_development.getMore | STARTED | {"getMore"=>55351517520, "collection"=>"actors"}
-MONGODB | localhost:27017 | wsmovies_development.getMore | SUCCEEDED | 0.16523s
-  Rendered actors/index.html.erb within layouts/application (414.6ms)
-Completed 200 OK in 1091ms (Views: 1090.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/actors" for ::1 at 2017-06-03 20:41:55 +0200
-Processing by ActorsController#index as HTML
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.010222s
-MONGODB | localhost:27017 | wsmovies_development.getMore | STARTED | {"getMore"=>52156659118, "collection"=>"actors"}
-MONGODB | localhost:27017 | wsmovies_development.getMore | SUCCEEDED | 0.040333999999999995s
-  Rendered actors/index.html.erb within layouts/application (330.1ms)
-Completed 200 OK in 359ms (Views: 358.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/actors/nm0000336" for ::1 at 2017-06-03 20:42:00 +0200
-Processing by ActorsController#show as HTML
-  Parameters: {"id"=>"nm0000336"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"nm0000336"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000754s
-  Rendered actors/show.html.erb within layouts/application (1.1ms)
-Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/actors" for ::1 at 2017-06-03 20:42:01 +0200
-Processing by ActorsController#index as HTML
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.004411s
-MONGODB | localhost:27017 | wsmovies_development.getMore | STARTED | {"getMore"=>54400527632, "collection"=>"actors"}
-MONGODB | localhost:27017 | wsmovies_development.getMore | SUCCEEDED | 0.037452s
-  Rendered actors/index.html.erb within layouts/application (266.9ms)
-Completed 200 OK in 324ms (Views: 323.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/actors/nm0000006.v2json" for ::1 at 2017-06-03 20:42:36 +0200
-Processing by ActorsController#show as V2JSON
-  Parameters: {"id"=>"nm0000006"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"nm0000006"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000819s
-  Rendered actors/show.v2json.jbuilder (0.5ms)
-Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/directors" for ::1 at 2017-06-05 16:38:38 +0200
-Processing by DirectorsController#create as JSON
-  Parameters: {"director"=>{"id"=>"300", "first_name"=>"Tim", "last_name"=>"Burton"}}
-Can't verify CSRF token authenticity
-MONGODB | Topology type 'unknown' initializing.
-MONGODB | Server localhost:27017 initializing.
-MONGODB | Topology type 'unknown' changed to type 'single'.
-MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
-MONGODB | There was a change in the members of the 'single' topology.
-MONGODB | localhost:27017 | wsmovies_development.insert | STARTED | {"insert"=>"directors", "documents"=>[{"_id"=>"300", "first_name"=>"Tim", "last_name"=>"Burton", "updated_at"=>2017-06-05 14:38:38 UTC, "created_at"=>2017-06-05 14:38:38 UTC}], "ordered"=>true}
-MONGODB | localhost:27017 | wsmovies_development.insert | SUCCEEDED | 0.08715099999999999s
-  Rendered directors/show.json.jbuilder (23.4ms)
-Completed 201 Created in 274ms (Views: 160.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/directors" for ::1 at 2017-06-05 16:44:58 +0200
-Processing by DirectorsController#index as JSON
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"directors", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.529416s
-  Rendered directors/index.json.jbuilder (552.6ms)
-Completed 200 OK in 642ms (Views: 600.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/directors" for ::1 at 2017-06-05 16:47:15 +0200
-Processing by DirectorsController#index as JSON
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"directors", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.001562s
-  Rendered directors/index.json.jbuilder (19.9ms)
-Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/directors" for ::1 at 2017-06-05 16:47:28 +0200
-Processing by DirectorsController#index as JSON
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"directors", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.00157s
-  Rendered directors/index.json.jbuilder (19.6ms)
-Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/directors" for ::1 at 2017-06-05 16:51:10 +0200
-Processing by DirectorsController#index as JSON
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"directors", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.001447s
-  Rendered directors/index.json.jbuilder (22.1ms)
-Completed 200 OK in 30ms (Views: 30.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/directors" for ::1 at 2017-06-05 16:52:08 +0200
-Processing by DirectorsController#index as JSON
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"directors", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.001563s
-  Rendered directors/index.json.jbuilder (19.8ms)
-Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/directors" for ::1 at 2017-06-05 16:53:56 +0200
-Processing by DirectorsController#index as JSON
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"directors", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.0023179999999999997s
-  Rendered directors/index.json.jbuilder (29.8ms)
-Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/directors" for ::1 at 2017-06-05 16:57:20 +0200
-Processing by DirectorsController#index as JSON
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"directors", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.001672s
-  Rendered directors/index.json.jbuilder (20.0ms)
-Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/movies" for ::1 at 2017-06-05 17:07:17 +0200
-Processing by MoviesController#create as V2JSON
+Started POST "/movies" for ::1 at 2017-06-07 10:32:53 +0200
+Processing by MoviesController#create as application/vnd.myorgmovies.v2+json
   Parameters: {"movie"=>{"id"=>"12347", "title"=>"rocky27"}}
 Can't verify CSRF token authenticity
-create.params={"movie"=>{"id"=>"12347", "title"=>"rocky27"}, "controller"=>"movies", "action"=>"create"}
-create.movie_params={"id"=>"12347", "title"=>"rocky27"}
-MONGODB | localhost:27017 | wsmovies_development.insert | STARTED | {"insert"=>"movies", "documents"=>[{"_id"=>"12347", "title"=>"rocky27", "updated_at"=>2017-06-05 15:07:17 UTC, "created_at"=>2017-06-05 15:07:17 UTC}], "ordered"=>true}
-MONGODB | localhost:27017 | wsmovies_development.insert | SUCCEEDED | 0.028166s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movies", "documents"=>[{"_id"=>"12347", "title"=>"rocky27", "updated_at"=>2017-06-07 08:32:53 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.077369s
   Couldn't find template for digesting: movies/create
-  Rendered movies/show.v2json.jbuilder (0.9ms)
-Completed 201 Created in 118ms (Views: 41.6ms | ActiveRecord: 0.0ms)
-MONGODB | Topology type 'unknown' initializing.
-MONGODB | Server localhost:27017 initializing.
-MONGODB | Topology type 'unknown' changed to type 'single'.
-MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
-MONGODB | There was a change in the members of the 'single' topology.
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.001291s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937ba35545fde0cc7000000'), "action"=>"create", "movie_id"=>"12347", "created_at"=>2017-06-07 08:32:53 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.063112s
+Completed 406 Not Acceptable in 156ms (ActiveRecord: 0.0ms)
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/movies_controller.rb:43:in `create'
 
 
-Started GET "/movies/12347" for ::1 at 2017-06-05 17:12:59 +0200
-Processing by MoviesController#show as V2JSON
+  Rendered /Users/Vangelis/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/Vangelis/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Vangelis/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Vangelis/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.8ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x007fe66ea05da0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007fe66ea05aa8 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007fe66e9fe690 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movie_accesses", "filter"=>{"movie_id"=>"12347", "action"=>"show-stale"}, "projection"=>{"created_at"=>1, "action"=>1}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.006095000000000001s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:35:16 +0200
+Processing by MoviesController#show as JSON
   Parameters: {"id"=>"12347"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000971s
-movies#show
-  Cache digest for app/views/actors/_actor.v2json.jbuilder: 5dedd3445140d0343c9e7ba8818f0404
-  Cache digest for app/views/movies/show.v2json.jbuilder: 725b83f251f80f93a669beb2aa3c058f
-response.etag="3f1e130ec7194d6f56068c435a9f12fe"
-  Rendered movies/show.v2json.jbuilder (0.4ms)
-Completed 200 OK in 35ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00042s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bac4545fde0cc7000001'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:35:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000278s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bac4545fde0cc7000002'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:35:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00031s
+  Rendered movies/show.json.jbuilder (2.6ms)
+Completed 200 OK in 20ms (Views: 7.4ms | ActiveRecord: 0.0ms)
 
 
-Started HEAD "/movies/12347" for ::1 at 2017-06-05 17:14:43 +0200
-Processing by MoviesController#show as V2JSON
-  Parameters: {"id"=>"12347"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.001346s
-movies#show
-  Cache digest for app/views/actors/_actor.v2json.jbuilder: 5dedd3445140d0343c9e7ba8818f0404
-  Cache digest for app/views/movies/show.v2json.jbuilder: 725b83f251f80f93a669beb2aa3c058f
-response.etag="3f1e130ec7194d6f56068c435a9f12fe"
-  Rendered movies/show.v2json.jbuilder (0.4ms)
-Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 0.0ms)
-
-
-Started PUT "/movies" for ::1 at 2017-06-05 17:16:50 +0200
-
-ActionController::RoutingError (No route matches [PUT] "/movies"):
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (26.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (185.0ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (187.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (355.5ms)
-
-
-Started PUT "/movies" for ::1 at 2017-06-05 17:18:33 +0200
-
-ActionController::RoutingError (No route matches [PUT] "/movies"):
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (130.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.8ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (166.2ms)
-
-
-Started PUT "/movies" for ::1 at 2017-06-05 17:20:02 +0200
-
-ActionController::RoutingError (No route matches [PUT] "/movies"):
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (40.9ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (178.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (87.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (186.3ms)
-
-
-Started GET "/movies" for ::1 at 2017-06-05 17:20:52 +0200
+Started GET "/movies/" for ::1 at 2017-06-07 10:35:21 +0200
 Processing by MoviesController#index as HTML
-index.params={"controller"=>"movies", "action"=>"index"}
-sliced.params={}
-MONGODB | Topology type 'unknown' initializing.
-MONGODB | Server localhost:27017 initializing.
-MONGODB | Topology type 'unknown' changed to type 'single'.
-MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
-MONGODB | There was a change in the members of the 'single' topology.
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.035739s
-  Rendered movies/index.html.erb within layouts/application (76.0ms)
-Completed 200 OK in 3534ms (Views: 3505.8ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.aggregate | STARTED | {"aggregate"=>"movies", "pipeline"=>[{"$match"=>{}}, {"$match"=>{"updated_at"=>{"$exists"=>true}}}, {"$group"=>{"_id"=>"updated_at", "count"=>{"$sum"=>1}, "max"=>{"$max"=>"$updated_at"}, "min"=>{"$min"=>"$updated_at"}, "sum"=>{"$sum"=>"$updated_at"}, ...
+MONGODB | localhost:27017 | caching_movies_development.aggregate | SUCCEEDED | 0.003954999999999999s
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000289s
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 448ms (Views: 442.7ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-06-05 17:20:56 +0200
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-07 10:35:21 +0200
 
 
-Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-06-05 17:20:56 +0200
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-06-07 10:35:21 +0200
 
 
-Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2017-06-05 17:20:56 +0200
-
-
-Started GET "/assets/hello.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-05 17:20:56 +0200
-
-
-Started GET "/assets/directors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-05 17:20:56 +0200
-
-
-Started GET "/movies/12347/edit" for ::1 at 2017-06-05 17:21:02 +0200
-Processing by MoviesController#edit as HTML
+Started HEAD "/movies/12347" for ::1 at 2017-06-07 10:36:16 +0200
+Processing by MoviesController#show as */*
   Parameters: {"id"=>"12347"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.04268s
-  Rendered movies/_form.html.erb (44.7ms)
-  Rendered movies/edit.html.erb within layouts/application (51.4ms)
-Completed 200 OK in 148ms (Views: 101.5ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00035800000000000003s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000003'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000247s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000004'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000392s
+  Rendered movies/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 47ms (Views: 26.4ms | ActiveRecord: 0.0ms)
 
 
-Started PATCH "/movies/12347" for ::1 at 2017-06-05 17:21:05 +0200
-Processing by MoviesController#update as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yU0g3/AeAqOq9UQGBYYvfZlRM/ERv56Sk8UcjM2ZCMQuql2mqATvX66Fa0fchrJ6oJ+d17gQJRXtnAOHsa0m/w==", "movie"=>{"title"=>"rocky2700"}, "commit"=>"Update Movie", "id"=>"12347"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.001648s
-MONGODB | localhost:27017 | wsmovies_development.update | STARTED | {"update"=>"movies", "updates"=>[{"q"=>{"_id"=>"12347"}, "u"=>{"$set"=>{"title"=>"rocky2700", "updated_at"=>2017-06-05 15:21:05 UTC}}, "multi"=>false, "upsert"=>false}], "ordered"=>true}
-MONGODB | localhost:27017 | wsmovies_development.update | SUCCEEDED | 0.072796s
-  Couldn't find template for digesting: movies/update
-Redirected to http://localhost:3000/movies/12347
-Completed 302 Found in 121ms (ActiveRecord: 0.0ms)
+Started HEAD "/movies/12347" for ::1 at 2017-06-07 10:36:16 +0200
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000386s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000005'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000292s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000006'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000323s
+  Rendered movies/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 41ms (Views: 25.1ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/movies/12347" for ::1 at 2017-06-05 17:21:06 +0200
+Started HEAD "/movies/12347" for ::1 at 2017-06-07 10:36:16 +0200
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000397s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000007'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000318s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000008'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000334s
+  Rendered movies/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started HEAD "/movies/12347" for ::1 at 2017-06-07 10:36:16 +0200
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000462s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000009'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000354s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc700000a'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00041600000000000003s
+  Rendered movies/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started HEAD "/movies/12347" for ::1 at 2017-06-07 10:36:16 +0200
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00036599999999999995s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc700000b'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000299s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc700000c'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000363s
+  Rendered movies/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 44ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started HEAD "/movies/12347" for ::1 at 2017-06-07 10:36:16 +0200
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00044699999999999997s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc700000d'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00039799999999999997s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc700000e'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000425s
+  Rendered movies/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started HEAD "/movies/12347" for ::1 at 2017-06-07 10:36:16 +0200
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000381s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc700000f'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00031999999999999997s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000010'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000363s
+  Rendered movies/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started HEAD "/movies/12347" for ::1 at 2017-06-07 10:36:16 +0200
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000414s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000011'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000359s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000012'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000352s
+  Rendered movies/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started HEAD "/movies/12347" for ::1 at 2017-06-07 10:36:16 +0200
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000385s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000013'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000295s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000014'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000307s
+  Rendered movies/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 42ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started HEAD "/movies/12347" for ::1 at 2017-06-07 10:36:16 +0200
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00038199999999999996s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000015'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000321s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb00545fde0cc7000016'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00037999999999999997s
+  Rendered movies/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 41ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movie_accesses", "filter"=>{"movie_id"=>"12347", "action"=>"show-stale"}, "projection"=>{"created_at"=>1, "action"=>1}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000937s
+
+
+Started GET "/movies/12347" for ::1 at 2017-06-07 10:36:59 +0200
 Processing by MoviesController#show as HTML
   Parameters: {"id"=>"12347"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.0010780000000000002s
-movies#show
-  Cache digest for app/views/movies/show.html.erb: af15479b9bbaae495dd9ad27a03d5451
-response.etag="12590806e1cbb30c6ac5057bfb61e3dd"
-  Rendered movies/show.html.erb within layouts/application (1.1ms)
-Completed 200 OK in 63ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00038199999999999996s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb2b545fde0cc7000017'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:59 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000374s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb2b545fde0cc7000018'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:36:59 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000303s
+  Rendered movies/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 15.5ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/movies" for ::1 at 2017-06-05 17:21:12 +0200
-Processing by MoviesController#index as HTML
-index.params={"controller"=>"movies", "action"=>"index"}
-sliced.params={}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.037215s
-  Rendered movies/index.html.erb within layouts/application (63.3ms)
-Completed 200 OK in 108ms (Views: 106.9ms | ActiveRecord: 0.0ms)
-
-
-Started PUT "/movies" for ::1 at 2017-06-05 17:21:54 +0200
-
-ActionController::RoutingError (No route matches [PUT] "/movies"):
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (124.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (163.9ms)
-
-
-Started GET "/movies/12347" for ::1 at 2017-06-05 17:22:37 +0200
-Processing by MoviesController#show as V2JSON
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:37:03 +0200
+Processing by MoviesController#show as JSON
   Parameters: {"id"=>"12347"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.00096s
-movies#show
-  Cache digest for app/views/actors/_actor.v2json.jbuilder: 5dedd3445140d0343c9e7ba8818f0404
-  Cache digest for app/views/movies/show.v2json.jbuilder: 725b83f251f80f93a669beb2aa3c058f
-response.etag="07a094a8e8b5cbe86dc37d9433351f07"
-  Rendered movies/show.v2json.jbuilder (30.4ms)
-Completed 200 OK in 46ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000419s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb2f545fde0cc7000019'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:37:03 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00027499999999999996s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+Completed 304 Not Modified in 5ms (ActiveRecord: 0.0ms)
 
 
-Started PUT "/movies" for ::1 at 2017-06-05 17:24:13 +0200
-
-ActionController::RoutingError (No route matches [PUT] "/movies"):
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (126.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (160.3ms)
-
-
-Started PUT "/movies" for ::1 at 2017-06-05 17:27:02 +0200
-
-ActionController::RoutingError (No route matches [PUT] "/movies"):
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.8) lib/rack/lock.rb:17:in `call'
-  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /Users/admin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (121.9ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (81.7ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
-  Rendered /Users/admin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (169.1ms)
-
-
-Started PUT "/movies/12347" for ::1 at 2017-06-05 17:28:34 +0200
-Processing by MoviesController#update as JSON
-  Parameters: {"movie"=>{"title"=>"rocky2700"}, "id"=>"12347"}
-Can't verify CSRF token authenticity
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.0008590000000000001s
-  Couldn't find template for digesting: movies/update
-  Rendered movies/show.json.jbuilder (1.3ms)
-Completed 200 OK in 36ms (Views: 30.3ms | ActiveRecord: 0.0ms)
-
-
-Started HEAD "/movies/12347" for ::1 at 2017-06-05 17:30:27 +0200
-Processing by MoviesController#show as V2JSON
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:37:16 +0200
+Processing by MoviesController#show as JSON
   Parameters: {"id"=>"12347"}
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.001486s
-movies#show
-  Cache digest for app/views/actors/_actor.v2json.jbuilder: 5dedd3445140d0343c9e7ba8818f0404
-  Cache digest for app/views/movies/show.v2json.jbuilder: 725b83f251f80f93a669beb2aa3c058f
-response.etag="07a094a8e8b5cbe86dc37d9433351f07"
-  Rendered movies/show.v2json.jbuilder (0.4ms)
-Completed 200 OK in 17ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000497s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb3c545fde0cc700001a'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:37:16 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.0015689999999999999s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+Completed 304 Not Modified in 7ms (ActiveRecord: 0.0ms)
 
 
-Started POST "/movies/12347/roles" for ::1 at 2017-06-05 17:32:32 +0200
-Processing by MovieRolesController#create as JSON
-  Parameters: {"movie_role"=>{"character"=>"character"}, "movie_id"=>"12347"}
-Can't verify CSRF token authenticity
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.0010140000000000001s
-if_unmodified_since=, current=
-MONGODB | localhost:27017 | wsmovies_development.update | STARTED | {"update"=>"movies", "updates"=>[{"q"=>{"_id"=>"12347"}, "u"=>{"$push"=>{"roles"=>{"_id"=>BSON::ObjectId('593579903970a804cbc1fe51'), "character"=>"character"}}}, "multi"=>false, "upsert"=>false}], "ordered"=>true}
-MONGODB | localhost:27017 | wsmovies_development.update | SUCCEEDED | 0.025159s
-MONGODB | localhost:27017 | wsmovies_development.update | STARTED | {"update"=>"movies", "updates"=>[{"q"=>{"_id"=>"12347"}, "u"=>{"$set"=>{"updated_at"=>2017-06-05 15:32:33 UTC, "roles.0._id"=>BSON::ObjectId('593579903970a804cbc1fe51'), "roles.0.character"=>"character"}}, "multi"=>false, "upsert"=>false}], "ordered"=...
-MONGODB | localhost:27017 | wsmovies_development.update | SUCCEEDED | 0.001433s
-  Couldn't find template for digesting: movie_roles/create
-  Rendered movies/show.json.jbuilder (0.7ms)
-Completed 200 OK in 74ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:37:18 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000283s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb3e545fde0cc700001b'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:37:18 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000219s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movie_accesses", "filter"=>{"movie_id"=>"12347", "action"=>"show-stale"}, "projection"=>{"created_at"=>1, "action"=>1}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000974s
 
 
-Started POST "/movies/12347/roles" for ::1 at 2017-06-05 17:36:46 +0200
-Processing by MovieRolesController#create as JSON
-  Parameters: {"movie_role"=>{"character"=>"character"}, "movie_id"=>"12347"}
-Can't verify CSRF token authenticity
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000942s
-if_unmodified_since=, current=
-MONGODB | localhost:27017 | wsmovies_development.update | STARTED | {"update"=>"movies", "updates"=>[{"q"=>{"_id"=>"12347"}, "u"=>{"$push"=>{"roles"=>{"_id"=>BSON::ObjectId('59357a8e3970a804cbc1fe52'), "character"=>"character"}}}, "multi"=>false, "upsert"=>false}], "ordered"=>true}
-MONGODB | localhost:27017 | wsmovies_development.update | SUCCEEDED | 0.0010069999999999999s
-MONGODB | localhost:27017 | wsmovies_development.update | STARTED | {"update"=>"movies", "updates"=>[{"q"=>{"_id"=>"12347"}, "u"=>{"$set"=>{"updated_at"=>2017-06-05 15:36:46 UTC, "roles.1._id"=>BSON::ObjectId('59357a8e3970a804cbc1fe52'), "roles.1.character"=>"character"}}, "multi"=>false, "upsert"=>false}], "ordered"=...
-MONGODB | localhost:27017 | wsmovies_development.update | SUCCEEDED | 0.000976s
-  Couldn't find template for digesting: movie_roles/create
-  Rendered movies/show.json.jbuilder (0.6ms)
-Completed 200 OK in 41ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:37:26 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00044899999999999996s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb46545fde0cc700001c'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:37:26 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000422s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+Completed 304 Not Modified in 7ms (ActiveRecord: 0.0ms)
 
 
-Started POST "/movies/12347/roles" for ::1 at 2017-06-05 17:44:11 +0200
-Processing by MovieRolesController#create as JSON
-  Parameters: {"movie_role"=>{"character"=>"character"}, "movie_id"=>"12347"}
-Can't verify CSRF token authenticity
-MONGODB | localhost:27017 | wsmovies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
-MONGODB | localhost:27017 | wsmovies_development.find | SUCCEEDED | 0.000949s
-  Couldn't find template for digesting: movie_roles/create
-if_unmodified_since=Mon, 05 Jun 2017 15:36:46 GMT, current=2017-06-05 15:36:46 UTC
-MONGODB | localhost:27017 | wsmovies_development.update | STARTED | {"update"=>"movies", "updates"=>[{"q"=>{"_id"=>"12347"}, "u"=>{"$push"=>{"roles"=>{"_id"=>BSON::ObjectId('59357c4b3970a804cbc1fe53'), "character"=>"character"}}}, "multi"=>false, "upsert"=>false}], "ordered"=>true}
-MONGODB | localhost:27017 | wsmovies_development.update | SUCCEEDED | 0.0010379999999999999s
-MONGODB | localhost:27017 | wsmovies_development.update | STARTED | {"update"=>"movies", "updates"=>[{"q"=>{"_id"=>"12347"}, "u"=>{"$set"=>{"updated_at"=>2017-06-05 15:44:11 UTC, "roles.2._id"=>BSON::ObjectId('59357c4b3970a804cbc1fe53'), "roles.2.character"=>"character"}}, "multi"=>false, "upsert"=>false}], "ordered"=...
-MONGODB | localhost:27017 | wsmovies_development.update | SUCCEEDED | 0.000912s
-  Couldn't find template for digesting: movie_roles/create
-  Rendered movies/show.json.jbuilder (0.9ms)
-Completed 200 OK in 85ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:37:29 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000412s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb49545fde0cc700001d'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:37:29 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000397s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+Completed 304 Not Modified in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:37:30 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000334s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb4a545fde0cc700001e'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:37:30 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00031699999999999995s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+Completed 304 Not Modified in 6ms (ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movie_accesses", "filter"=>{"movie_id"=>"12347", "action"=>"show-stale"}, "projection"=>{"created_at"=>1, "action"=>1}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000932s
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movie_accesses", "filter"=>{"movie_id"=>"12347", "action"=>"show-stale"}, "projection"=>{"created_at"=>1, "action"=>1}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.0009310000000000001s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:37:51 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000361s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb5f545fde0cc700001f'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:37:51 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000284s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+Completed 304 Not Modified in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:37:53 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000496s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bb61545fde0cc7000020'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:37:53 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00043400000000000003s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+Completed 304 Not Modified in 6ms (ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movie_accesses", "filter"=>{"movie_id"=>"12347", "action"=>"show-stale"}, "projection"=>{"created_at"=>1, "action"=>1}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.0009410000000000001s
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movie_accesses", "filter"=>{"movie_id"=>"12347", "action"=>"show-stale"}, "projection"=>{"created_at"=>1, "action"=>1}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.001073s
+
+
+Started HEAD "/movies/12347" for ::1 at 2017-06-07 10:40:51 +0200
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000402s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bc13545fde0cc7000021'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:40:51 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00029499999999999996s
+  Cache digest for app/views/movies/show.html.erb: 70af63d43957701e44a5b8ee9c81defc
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bc13545fde0cc7000022'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:40:51 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000328s
+  Rendered movies/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000606s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.00031600000000000004s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:45:39 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00038500000000000003s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd33545fde0cc7000023'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:39 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000355s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd33545fde0cc7000024'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:39 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000465s
+  Rendered movies/show.json.jbuilder (0.4ms)
+Completed 200 OK in 22ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000422s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000308s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:45:42 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000363s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd36545fde0cc7000025'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:42 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00032199999999999997s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd36545fde0cc7000026'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:42 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000254s
+  Rendered movies/show.json.jbuilder (0.2ms)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00045200000000000004s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000302s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:45:45 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00033099999999999997s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd39545fde0cc7000027'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:45 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00029099999999999997s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd39545fde0cc7000028'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:45 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00022600000000000002s
+  Rendered movies/show.json.jbuilder (0.2ms)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000436s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000305s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:45:48 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000451s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd3c545fde0cc7000029'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:48 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000347s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd3c545fde0cc700002a'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:48 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000288s
+  Rendered movies/show.json.jbuilder (0.2ms)
+Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00044100000000000004s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000296s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:45:51 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000343s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd3f545fde0cc700002b'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:51 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000238s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd3f545fde0cc700002c'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:51 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000254s
+  Rendered movies/show.json.jbuilder (0.2ms)
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000422s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.00031499999999999996s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:45:54 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00041s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd42545fde0cc700002d'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:54 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00026900000000000003s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd42545fde0cc700002e'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:54 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00024400000000000002s
+  Rendered movies/show.json.jbuilder (0.2ms)
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000426s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000307s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:45:57 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000356s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd45545fde0cc700002f'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:57 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000267s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd45545fde0cc7000030'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:45:57 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000214s
+  Rendered movies/show.json.jbuilder (0.2ms)
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000445s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000303s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:46:00 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00037999999999999997s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd48545fde0cc7000031'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:46:00 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000388s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd48545fde0cc7000032'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:46:00 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.0003s
+  Rendered movies/show.json.jbuilder (0.2ms)
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000448s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000305s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:46:03 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000406s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd4b545fde0cc7000033'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:46:03 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000259s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd4b545fde0cc7000034'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:46:03 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000284s
+  Rendered movies/show.json.jbuilder (0.2ms)
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000462s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000279s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:46:06 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000361s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd4e545fde0cc7000035'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:46:06 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00024s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bd4e545fde0cc7000036'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:46:06 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000258s
+  Rendered movies/show.json.jbuilder (0.2ms)
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.001062s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.00052s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:47:38 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.0006039999999999999s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bdaa545fde0e59000000'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:47:38 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000661s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bdaa545fde0e59000001'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:47:38 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000384s
+  Rendered movies/show.json.jbuilder (11.0ms)
+Completed 200 OK in 49ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000476s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.00031099999999999997s
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000466s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000286s
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000492s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000305s
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000494s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000513s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:47:50 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000419s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bdb6545fde0e59000002'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:47:50 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00023500000000000002s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bdb6545fde0e59000003'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:47:50 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000203s
+  Rendered movies/show.json.jbuilder (0.2ms)
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000489s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000386s
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000548s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000338s
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00044300000000000003s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000315s
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.000459s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.00030900000000000003s
+
+
+Started GET "/movies/12347.json" for ::1 at 2017-06-07 10:48:02 +0200
+Processing by MoviesController#show as JSON
+  Parameters: {"id"=>"12347"}
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00039400000000000004s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bdc2545fde0e59000004'), "action"=>"show", "movie_id"=>"12347", "created_at"=>2017-06-07 08:48:02 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000284s
+  Cache digest for app/views/movies/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937bdc2545fde0e59000005'), "action"=>"show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 08:48:02 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00023400000000000002s
+  Rendered movies/show.json.jbuilder (0.3ms)
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.00043s
+MONGODB | localhost:27017 | caching_movies_development.count | STARTED | {"count"=>"movie_accesses", "query"=>{"movie_id"=>"12347", "action"=>"show"}}
+MONGODB | localhost:27017 | caching_movies_development.count | SUCCEEDED | 0.000278s
+
+
+Started GET "/movie_pages/12347.json" for ::1 at 2017-06-07 11:31:38 +0200
+Processing by MoviePagesController#show as JSON
+  Parameters: {"id"=>"12347"}
+cached file /Users/Vangelis/Documents/Vagos Personal Stuff/coursera/Ruby on Rails Web Services and Integration with MongoDB/Ruby-on-Rails-Web-Services-and-Integration-with-MongoDB/wsmovies/public/page_cache//movie_pages/12347.json not found
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.001253s
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937c7fa545fde0e59000006'), "action"=>"cached-page#show", "movie_id"=>"12347", "created_at"=>2017-06-07 09:31:38 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.000575s
+  Cache digest for app/views/movie_pages/show.json.jbuilder: f3cf985035637d8e11a9c86c4f738ede
+MONGODB | localhost:27017 | caching_movies_development.insert | STARTED | {"insert"=>"movie_accesses", "documents"=>[{"_id"=>BSON::ObjectId('5937c7fa545fde0e59000007'), "action"=>"cached-page#show-stale", "movie_id"=>"12347", "created_at"=>2017-06-07 09:31:38 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | caching_movies_development.insert | SUCCEEDED | 0.00048100000000000004s
+  Rendered movie_pages/show.json.jbuilder (0.9ms)
+Write page /Users/Vangelis/Documents/Vagos Personal Stuff/coursera/Ruby on Rails Web Services and Integration with MongoDB/Ruby-on-Rails-Web-Services-and-Integration-with-MongoDB/wsmovies/public/page_cache/movie_pages/12347.json (4.9ms)
+Completed 200 OK in 68ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movie_pages/12347.json" for ::1 at 2017-06-07 11:35:18 +0200
+Processing by MoviePagesController#show as JSON
+  Parameters: {"movie"=>{"title"=>"rocky2600"}, "id"=>"12347"}
+Redirected to http://localhost:3000/page_cache/movie_pages/12347.json
+Filter chain halted as :set_cached_movie rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | caching_movies_development.find | STARTED | {"find"=>"movies", "filter"=>{"_id"=>"12347"}}
+MONGODB | localhost:27017 | caching_movies_development.find | SUCCEEDED | 0.001487s

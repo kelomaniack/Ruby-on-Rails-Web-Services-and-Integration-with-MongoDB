@@ -1,14 +1,5 @@
 Rails.application.routes.draw do
-  get 'hello/sayhello'
-  get 'hello/say/:something' => "hello#say"
-
-  resources :directors
-  resources :movies do
-    resources :movie_roles, as: :role, path: "roles"
-  end
-  resources :actors
-  get "/api/movies/:id" => "movies#show", as: "mystuff"
-
+  resources :movies, :movie_pages, :movie_actions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
