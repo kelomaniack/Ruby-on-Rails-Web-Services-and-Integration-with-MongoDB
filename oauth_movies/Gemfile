@@ -48,3 +48,7 @@ end
 gem 'mongoid', '~> 5.0', '>= 5.0.2'
 gem 'httparty', '~> 0.13.7'
 gem 'responders', '~> 2.1', '>= 2.1.1'
+gem 'devise', '~> 3.5', '>= 3.5.3'
+gem 'doorkeeper', '~> 3.1'
+gem 'doorkeeper-mongodb', github:"doorkeeper-gem/doorkeeper-mongodb"
+gem 'oauth2', '~> 1.0'
