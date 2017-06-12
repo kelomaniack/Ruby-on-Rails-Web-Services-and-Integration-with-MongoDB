@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f0e68af9-c23b-4de7-b22a-16bee6f38a0b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/base_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/base_controller.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -724,7 +723,7 @@
       <workItem from="1496917899541" duration="28000" />
       <workItem from="1496917941967" duration="1198000" />
       <workItem from="1496919783682" duration="85000" />
-      <workItem from="1496993245049" duration="3433000" />
+      <workItem from="1496993245049" duration="3494000" />
     </task>
     <task id="LOCAL-00001" summary="Just a commit">
       <created>1496919813427</created>
@@ -740,16 +739,24 @@
       <option name="project" value="LOCAL" />
       <updated>1496999600105</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finished OAuth Integration">
+      <created>1497001352442</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1497001352442</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4966000" />
+    <option name="totallyTimeSpent" value="5027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1289" height="1337" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998455" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -778,7 +785,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Just a commit" />
     <MESSAGE value="Finished Integrated Authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Integrated Authentication" />
+    <MESSAGE value="Finished OAuth Integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished OAuth Integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
