@@ -4,13 +4,26 @@ class Racer
   attr_accessor :id, :number, :first_name, :last_name, :gender, :group, :secs
 
   def initialize(params={})
-    @id=params[:_id].nil? ? params[:id] : params[:_id].to_s
+    @id = params[:_id].nil? ? params[:id] : params[:_id].to_s
     @number=params[:number].to_i
     @first_name=params[:first_name]
     @last_name=params[:last_name]
     @gender=params[:gender]
     @group=params[:group]
     @secs=params[:secs].to_i
+  end
+
+  # tell Rails whether this instance is persisted
+  def persisted?
+    !@id.nil?
+  end
+
+  def created_at
+    nil
+  end
+
+  def updated_at
+    nil
   end
 
   # convenience method for access to client in console
@@ -31,7 +44,7 @@ class Racer
   #   * skip - optional skip to skip results
   #   * limit - number of documents to include
   def self.all(prototype={}, sort={:number => 1}, skip=0, limit=nil)
-    Rails.logger.debug { "getting all zips, prototype=#{prototype}, sort=#{sort}, skip=#{skip}, limit=#{limit}" }
+    Rails.logger.debug { "getting all racers, prototype=#{prototype}, sort=#{sort}, skip=#{skip}, limit=#{limit}" }
 
     result=collection.find(prototype)
                .sort(sort)
@@ -79,7 +92,37 @@ class Racer
     Rails.logger.debug {"destroying #{self}"}
 
     self.class.collection.find(number: @number).delete_one
-    
+
+  end
+
+  #implememts the will_paginate paginate method that accepts
+  # page - number >= 1 expressing offset in pages
+  # per_page - row limit within a single page
+  # also take in some custom parameters like
+  # sort - order criteria for document
+  # (terms) - used as a prototype for selection
+  # This method uses the all() method as its implementation
+  # and returns instantiated Zip classes within a will_paginate
+  # page
+  def self.paginate(params)
+    Rails.logger.debug("paginate(#{params})")
+    page=(params[:page] ||= 1).to_i
+    limit=(params[:per_page] ||= 30).to_i
+    offset=(page-1)*limit
+    sort=params[:sort] ||= {number: 1}
+
+    #get the associated page of Racers -- eagerly convert doc to Racer
+    racers=[]
+    all({}, sort, offset, limit).each do |doc|
+      racers << Racer.new(doc)
+    end
+
+    #get a count of all documents in the collection
+    total=all({}, sort, 0, 1).count
+
+    WillPaginate::Collection.create(page, limit, total) do |pager|
+      pager.replace(racers)
+    end
   end
 
 end
