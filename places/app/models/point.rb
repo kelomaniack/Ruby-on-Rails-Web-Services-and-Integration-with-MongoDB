@@ -1,10 +1,12 @@
 class Point
-  attr_accessor :longitude, type: Integer
-  attr_accessor :latitude, type: Integer
+  attr_accessor :longitude, :latitude
 
   #creates a DB-form of the instance
   def to_hash
-    {:type => 'Point', :coordinates => [@longitude, @latitude]}
+    params = {}
+    params[:type] = "Point"
+    params[:coordinates] = [@longitude, @latitude]
+    return params
   end
 
   def initialize(params = {})
