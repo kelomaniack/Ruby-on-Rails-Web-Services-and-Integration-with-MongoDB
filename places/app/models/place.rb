@@ -30,28 +30,63 @@ class Place
   end
 
   def self.find_by_short_name input
-    Rails.logger.debug {"getting short_name #{input}"}
+    Rails.logger.debug { "getting short_name #{input}" }
 
-    collection.find(:'address_components.short_name'=>input)
+    collection.find(:'address_components.short_name' => input)
 
+  end
+
+  def self.find id
+    id = BSON::ObjectId.from_string(id)
+    result = collection.find({_id: id}).first
+    result = Place.new(result) if !result.nil?
   end
 
   def self.to_places collection
-    collection.map{|doc| Place.new(doc)}
+    collection.map { |doc| Place.new(doc) }
   end
 
+  def self.all(offset = 0, limit = 0)
+    result = collection.find.skip(offset).limit(limit)
+    places = []
+    result.each do |r|
+      places << Place.new(r)
+    end
+    return places
+  end
 
+  # remove the document associated with this instance form the DB
+  def destroy
+    Rails.logger.debug { "destroying #{self}" }
 
+    self.class.collection
+        .find(_id: BSON::ObjectId(@id))
+        .delete_one
+  end
 
+  def self.get_address_components(sort = {}, offset = 0, limit = nil)
 
+    query = [{:$project => {_id: 1, address_components: 1, formatted_address: 1, :'geometry.geolocation' => 1}},
+             {:$unwind => '$address_components'}, {:$skip => offset}]
+    query.insert(2, {:$sort => sort}) if sort != {}
+    query << {:$limit => limit} if !limit.nil?
+    collection.find.aggregate(query)
+  end
 
+  def self.get_country_names
+    collection.find.aggregate([{:$unwind => '$address_components'},
+                               {:$match => {:'address_components.types' => "country"}},
+                               {:$group => {_id: "$address_components.long_name"}},
+                               {:$project => {_id: 1, }}]).to_a.map {|h| h[:_id]}
 
+  end
 
+  def self.find_ids_by_country_code country_code
+    collection.find.aggregate([{:$unwind => '$address_components'},
+                               {:$match => {:'address_components.short_name' => country_code}},
+                               {:$project => {_id: 1, }}]).map {|doc| doc[:_id].to_s}
 
-
-
-
-
+  end
 
 
 
