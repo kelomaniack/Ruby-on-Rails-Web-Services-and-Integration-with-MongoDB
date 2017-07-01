@@ -43,7 +43,7 @@ class Place
   end
 
   def self.to_places collection
-    collection.map { |doc| Place.new(doc) }
+    collection.map {|doc| Place.new(doc)}
   end
 
   def self.all(offset = 0, limit = 0)
@@ -96,6 +96,33 @@ class Place
   def self.remove_indexes
     collection.indexes.drop_all
   end
+
+  def self.near(input, max_meters=nil)
+
+    result = collection.find({:'geometry.geolocation' => {:$near => {
+                                                          :$geometry => input.to_hash,
+                                                          :$maxDistance => max_meters}}})
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
