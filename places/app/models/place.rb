@@ -89,7 +89,13 @@ class Place
   end
 
 
+  def self.create_indexes
+    collection.indexes.create_one({:'geometry.geolocation' => Mongo::Index::GEO2DSPHERE})
+  end
 
+  def self.remove_indexes
+    collection.indexes.drop_all
+  end
 
 
 
