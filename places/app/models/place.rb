@@ -43,7 +43,7 @@ class Place
   end
 
   def self.to_places collection
-    collection.map {|doc| Place.new(doc)}
+    collection.map { |doc| Place.new(doc) }
   end
 
   def self.all(offset = 0, limit = 0)
@@ -77,14 +77,14 @@ class Place
     collection.find.aggregate([{:$unwind => '$address_components'},
                                {:$match => {:'address_components.types' => "country"}},
                                {:$group => {_id: "$address_components.long_name"}},
-                               {:$project => {_id: 1, }}]).to_a.map {|h| h[:_id]}
+                               {:$project => {_id: 1, }}]).to_a.map { |h| h[:_id] }
 
   end
 
   def self.find_ids_by_country_code country_code
     collection.find.aggregate([{:$unwind => '$address_components'},
                                {:$match => {:'address_components.short_name' => country_code}},
-                               {:$project => {_id: 1, }}]).map {|doc| doc[:_id].to_s}
+                               {:$project => {_id: 1, }}]).map { |doc| doc[:_id].to_s }
 
   end
 
@@ -100,30 +100,21 @@ class Place
   def self.near(input, max_meters=nil)
 
     result = collection.find({:'geometry.geolocation' => {:$near => {
-                                                          :$geometry => input.to_hash,
-                                                          :$maxDistance => max_meters}}})
+        :$geometry => input.to_hash,
+        :$maxDistance => max_meters}}})
   end
 
+  def near(max_meters=nil)
+    max_meters = max_meters.nil? ? 1000 : max_meters.to_i
+    result = Place.near(@location, max_meters)
+    Place.to_places(result)
 
+  end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  def photos(offset=0, limit=nil)
+    result = Photo.find_photos_for_place(@id).skip(offset)
+    result = result.limit(limit) if !limit.nil?
+    result = result.map {|r| Photo.new(r)}
+  end
 
 end
