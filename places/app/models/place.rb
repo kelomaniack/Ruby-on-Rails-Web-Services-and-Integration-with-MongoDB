@@ -26,7 +26,7 @@ class Place
     @id = params[:_id].nil? ? params[:id] : params[:_id].to_s
     @formatted_address = params[:formatted_address]
     @location = Point.new(params[:geometry][:geolocation]) if !params.nil?
-    @address_components = params[:address_components].map { |a| AddressComponent.new(a) if !params[:address_components].nil? }
+    @address_components = params[:address_components].map {|a| AddressComponent.new(a)} if !params[:address_components].nil?
   end
 
   def self.find_by_short_name input
@@ -97,11 +97,8 @@ class Place
     collection.indexes.drop_all
   end
 
-  def self.near(input, max_meters=nil)
-
-    result = collection.find({:'geometry.geolocation' => {:$near => {
-        :$geometry => input.to_hash,
-        :$maxDistance => max_meters}}})
+  def self.near(input, max_meters = nil)
+    result = collection.find({:'geometry.geolocation' => {:$near => {:$geometry => input.to_hash, :$maxDistance => max_meters}}})
   end
 
   def near(max_meters=nil)
