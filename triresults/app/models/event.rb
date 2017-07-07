@@ -1,5 +1,7 @@
 class Event
   include Mongoid::Document
+  Mongo::Logger.logger.level = ::Logger::INFO
+
   field :o, as: :order, type: Integer
   field :n, as: :name, type: String
   field :d, as: :distance, type: Float

@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71076a6a-b620-4d09-82fe-fdbb715d7c0b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Point," afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../[@longitude,@latitude]}" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../triresults/.idea/runConfigurations/Development__triresults.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../triresults/.idea/runConfigurations/Production__triresults.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../triresults/.idea/runConfigurations/spec__triresults.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../triresults/.idea/runConfigurations/test__triresults.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/movies.iml" afterPath="$PROJECT_DIR$/.idea/movies.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../places/.idea/.generators" afterPath="$PROJECT_DIR$/../places/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../places/.idea/places.iml" afterPath="$PROJECT_DIR$/../places/.idea/places.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../places/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../places/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../triresults/.idea/.generators" afterPath="$PROJECT_DIR$/../triresults/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../triresults/.idea/triresults.iml" afterPath="$PROJECT_DIR$/../triresults/.idea/triresults.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../triresults/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../triresults/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../triresults/app/models/event.rb" afterPath="$PROJECT_DIR$/../triresults/app/models/event.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
