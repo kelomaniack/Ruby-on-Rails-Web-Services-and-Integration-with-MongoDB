@@ -5,6 +5,8 @@ class Entrant
 
   store_in collection: "results"
 
+  embeds_many :results, class_name: 'LegResult', order: [:"event.o".asc]
+
   field :bid, as: :bib, type: Integer
   field :secs, as: :secs, type: Float
   field :o, as: :overall, type: Placing

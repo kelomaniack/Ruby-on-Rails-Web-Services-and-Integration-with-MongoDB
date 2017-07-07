@@ -3,6 +3,8 @@ class LegResult
   field :secs, type: Float
   field :event, type: Event
 
+  embedded_in :entrant
+
   def calc_ave
   end
 
