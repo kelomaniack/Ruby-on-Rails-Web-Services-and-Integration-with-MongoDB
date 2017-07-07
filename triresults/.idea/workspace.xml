@@ -19,8 +19,38 @@
       <file leaf-file-name="racer.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/racer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="76">
+              <caret line="4" column="56" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="racer_info.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/racer_info.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="point.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/point.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="race.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/race.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -29,18 +59,18 @@
       <file leaf-file-name="leg_result.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/leg_result.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="380">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entrant.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="entrant.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/entrant.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="72" lean-forward="false" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+            <state relative-caret-position="152">
+              <caret line="8" column="74" lean-forward="false" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -57,10 +87,10 @@
         <option value="$PROJECT_DIR$/app/models/placing.rb" />
         <option value="$PROJECT_DIR$/app/models/racer.rb" />
         <option value="$PROJECT_DIR$/app/models/racer_info.rb" />
-        <option value="$PROJECT_DIR$/app/models/race.rb" />
         <option value="$PROJECT_DIR$/app/models/event.rb" />
         <option value="$PROJECT_DIR$/app/models/leg_result.rb" />
         <option value="$PROJECT_DIR$/app/models/entrant.rb" />
+        <option value="$PROJECT_DIR$/app/models/race.rb" />
       </list>
     </option>
   </component>
@@ -448,12 +478,12 @@
       <workItem from="1499355422122" duration="202000" />
       <workItem from="1499369095510" duration="2933000" />
       <workItem from="1499409678021" duration="4493000" />
-      <workItem from="1499451177429" duration="492000" />
+      <workItem from="1499451177429" duration="1194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8135000" />
+    <option name="totallyTimeSpent" value="8837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -678,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/point.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/address.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -699,15 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/racer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/racer_info.rb" />
     <entry file="file://$USER_HOME$/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/mongoid-5.0.2/lib/mongoid/clients/storage_options.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="922">
@@ -716,20 +730,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/race.rb" />
     <entry file="file://$PROJECT_DIR$/app/models/event.rb" />
-    <entry file="file://$PROJECT_DIR$/app/models/leg_result.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/point.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="152">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/racer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="56" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/racer_info.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/entrant.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="72" lean-forward="false" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+        <state relative-caret-position="152">
+          <caret line="8" column="74" lean-forward="false" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/leg_result.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/race.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding />
         </state>
       </provider>
