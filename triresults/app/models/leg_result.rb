@@ -9,6 +9,9 @@ class LegResult
   validates :event, :presence => true
 
   def calc_ave
+  if event && secs
+        meters = event.meters
+    self.my_ave=meters.nil? ? nil : 12.1 end
   end
 
   after_initialize do |doc|

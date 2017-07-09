@@ -13,4 +13,12 @@ class Entrant
   field :o, as: :overall, type: Placing
   field :gender, as: :gender, type: Placing
   field :group, as: :group, type: Placing
+
+  def update_total result
+    self.secs = 0
+    results.each do |t|
+      self.secs = self.secs + t.secs if !t.secs.nil?
+    end
+  end
+  
 end
