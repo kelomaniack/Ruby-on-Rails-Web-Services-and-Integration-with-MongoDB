@@ -4,8 +4,8 @@
     <list default="true" id="71076a6a-b620-4d09-82fe-fdbb715d7c0b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../triresults/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../triresults/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../triresults/app/models/entrant.rb" afterPath="$PROJECT_DIR$/../triresults/app/models/entrant.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../triresults/app/models/race.rb" afterPath="$PROJECT_DIR$/../triresults/app/models/race.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../triresults/app/models/racer.rb" afterPath="$PROJECT_DIR$/../triresults/app/models/racer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../triresults/app/models/racer_info.rb" afterPath="$PROJECT_DIR$/../triresults/app/models/racer_info.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
