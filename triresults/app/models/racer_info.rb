@@ -1,6 +1,5 @@
 class RacerInfo
   include Mongoid::Document
-  Mongo::Logger.logger.level = ::Logger::INFO
 
   field :fn, as: :first_name, type: String
   field :ln, as: :last_name, type: String
@@ -10,15 +9,11 @@ class RacerInfo
   field :racer_id, as: :_id
   field :_id, default: -> { racer_id }
 
-  embedded_in :parent, polymorphic: true
-
-  validates_presence_of :first_name
-  validates_presence_of :last_name
-  validates_presence_of :gender
-  validates_presence_of :birth_year
-
+  validates :first_name, :last_name, :gender, :birth_year, presence: true
   validates :gender, inclusion: {in: %w(M F)}
   validates :birth_year, numericality: {only_integer: true, less_than: Date.today.year, message: "Has to be in the past"}
+
+  embedded_in :parent, polymorphic: true
 
   ["city", "state"].each do |action|
     define_method("#{action}") do
@@ -30,5 +25,4 @@ class RacerInfo
       self.residence = object
     end
   end
-
 end
