@@ -6,6 +6,7 @@ class Entrant
   store_in collection: "results"
 
   embeds_many :results, class_name: 'LegResult', order: [:"event.o".asc]
+  embeds_one :race, class_name: 'RaceRef', autobuild: true
   embeds_one :racer, as: :parent, class_name: 'RacerInfo', autobuild: true
 
   field :bid, as: :bib, type: Integer
@@ -19,6 +20,10 @@ class Entrant
     results.each do |t|
       self.secs = self.secs + t.secs if !t.secs.nil?
     end
+  end
+
+  def the_race
+    race.race
   end
   
 end
