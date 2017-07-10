@@ -1,5 +1,7 @@
 class LegResult
+
   include Mongoid::Document
+
   field :secs, type: Float
   field :event, type: Event
 
@@ -9,9 +11,6 @@ class LegResult
   validates :event, :presence => true
 
   def calc_ave
-  if event && secs
-        meters = event.meters
-    self.my_ave=meters.nil? ? nil : 12.1 end
   end
 
   after_initialize do |doc|
@@ -22,5 +21,4 @@ class LegResult
     self[:secs] = value
     calc_ave
   end
-
 end
