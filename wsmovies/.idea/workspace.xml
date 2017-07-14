@@ -2,11 +2,157 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="655d4b67-05a5-4bb2-bf41-fd9f1c9204b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Development__wsmovies.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Production__wsmovies.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/spec__wsmovies.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/test__wsmovies.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/.idea/.generators" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/.idea/.rakeTasks" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/.idea/runConfigurations/Development__triresults.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/.idea/runConfigurations/Production__triresults.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/.idea/runConfigurations/spec__triresults.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/.idea/runConfigurations/test__triresults.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/.idea/triresults.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/.rspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/Gemfile.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/README.rdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/assets/images/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/assets/javascripts/application.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/assets/stylesheets/application.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/controllers/application_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/controllers/concerns/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/controllers/racers_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/controllers/races_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/helpers/application_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/helpers/racers_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/helpers/races_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/mailers/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/address.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/bike_result.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/concerns/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/entrant.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/event.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/leg_result.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/placing.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/point.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/race.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/race_ref.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/racer.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/racer_info.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/run_result.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/models/swim_result.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/layouts/application.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/racers/_form.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/racers/_racer.json.jbuilder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/racers/edit.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/racers/index.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/racers/index.json.jbuilder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/racers/new.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/racers/show.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/racers/show.json.jbuilder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/races/_form.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/races/_race.json.jbuilder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/races/edit.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/races/index.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/races/index.json.jbuilder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/races/new.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/races/show.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/app/views/races/show.json.jbuilder" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/bin/bundle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/bin/rails" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/bin/rake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/bin/setup" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/bin/spring" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config.ru" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/application.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/boot.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/database.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/environment.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/environments/development.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/environments/production.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/environments/test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/initializers/assets.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/initializers/backtrace_silencers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/initializers/cookies_serializer.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/initializers/filter_parameter_logging.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/initializers/inflections.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/initializers/mime_types.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/initializers/session_store.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/initializers/to_time_preserves_timezone.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/initializers/wrap_parameters.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/locales/en.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/mongoid.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/routes.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/config/secrets.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/db/racers.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/db/races.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/db/results.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/db/seeds.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/lib/assets/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/lib/tasks/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/lib/tasks/assignment.rake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/log/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/public/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/public/422.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/public/500.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/public/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/public/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/caching_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/data/racers.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/data/races.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/data/results.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/errors_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/methods_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/params_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/rails_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/representations_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/resources_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/test_utils.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/spec/uri_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/controllers/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/controllers/racers_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/controllers/races_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/addresses.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/bike_results.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/entrants.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/events.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/leg_results.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/placings.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/points.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/race_refs.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/racer_infos.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/racers.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/races.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/run_results.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/fixtures/swim_results.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/helpers/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/integration/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/mailers/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/address_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/bike_result_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/entrant_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/event_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/leg_result_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/placing_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/point_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/race_ref_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/race_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/racer_info_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/racer_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/run_result_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/models/swim_result_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/test/test_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/vendor/assets/javascripts/.keep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../module4/vendor/assets/stylesheets/.keep" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../module4/.idea/modules.xml" afterPath="$PROJECT_DIR$/../module4/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/wsmovies.iml" afterPath="$PROJECT_DIR$/.idea/wsmovies.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -66,7 +212,7 @@
         <entry file="file://$PROJECT_DIR$/public/404.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
-              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+              <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -86,7 +232,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,6 +284,7 @@
       <list>
         <option value="$PROJECT_DIR$/app/services/cached_ws.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
       </list>
     </option>
   </component>
@@ -168,6 +315,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -314,9 +464,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,14 +552,15 @@
       <workItem from="1496907768973" duration="381000" />
       <workItem from="1496917865467" duration="33000" />
       <workItem from="1496917928841" duration="12000" />
+      <workItem from="1500024222269" duration="605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2548000" />
+    <option name="totallyTimeSpent" value="3153000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1289" height="1337" extended-state="0" />
+    <frame x="0" y="23" width="1289" height="1337" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -445,6 +593,86 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/cached_ws.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/movie_pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="68" column="9" lean-forward="false" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/422.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/500.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -709,7 +937,7 @@
     <entry file="file://$PROJECT_DIR$/public/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -725,7 +953,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/triresults.iml" filepath="$PROJECT_DIR$/.idea/triresults.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../triresults-Web-Services/.idea/triresults.iml" filepath="$PROJECT_DIR$/../triresults-Web-Services/.idea/triresults.iml" />
     </modules>
   </component>
 </project>

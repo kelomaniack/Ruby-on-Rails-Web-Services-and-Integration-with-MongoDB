@@ -69,8 +69,8 @@ feature "Module #4 URIs", :type => :routing do
   end
 
   context "rq05" do 
-    scenario "TriResultsWS class created as indicated" do
-      expect(class_exists?("TriResultsWS"))
+    scenario "TriResultsWS.rb class created as indicated" do
+      expect(class_exists?("TriResultsWS.rb"))
       expect(TriResultsWS.included_modules).to include(HTTParty)
       expect(TriResultsWS.base_uri).to start_with("http://")
     end
