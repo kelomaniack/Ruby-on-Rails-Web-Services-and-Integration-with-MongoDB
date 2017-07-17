@@ -20,16 +20,12 @@ module Api
       end
     end
 
-    # GET /races
-    # GET /races.json
     def index
       if !request.accept || request.accept == "*/*"
         render plain: "#{api_races_path}, offset=[#{params[:offset]}], limit=[#{params[:limit]}]"
       end
     end
 
-    # GET /races/1
-    # GET /races/1.json
     def show
       if !request.accept || request.accept == "*/*"
         render plain: api_race_path(params[:id])
@@ -39,17 +35,6 @@ module Api
       end
     end
 
-    # GET /races/new
-    def new
-      @race = Race.new
-    end
-
-    # GET /races/1/edit
-    def edit
-    end
-
-    # POST /races
-    # POST /races.json
     def create
       Rails.logger.debug("Accept:#{request.accept}")
       if !request.accept || request.accept == "*/*"
@@ -70,39 +55,37 @@ module Api
       end
     end
 
-    # PATCH/PUT /races/1
-    # PATCH/PUT /races/1.json
     def update
-      respond_to do |format|
+      if !request.accept || request.accept == "*/*"
+        render plain: :nothing, status: :ok
+      else
+        set_race
+        Rails.logger.debug("method=#{request.method}")
         if @race.update(race_params)
-          format.html { redirect_to @race, notice: 'Race was successfully updated.' }
-          format.json { render :show, status: :ok, location: @race }
+          render json: @race, status: :ok
         else
-          format.html { render :edit }
-          format.json { render json: @race.errors, status: :unprocessable_entity }
+          render json: @race, status: :error
         end
       end
     end
 
-    # DELETE /races/1
-    # DELETE /races/1.json
     def destroy
-      @race.destroy
-      respond_to do |format|
-        format.html { redirect_to races_url, notice: 'Race was successfully destroyed.' }
-        format.json { head :no_content }
+      set_race
+      if @race.destroy
+        render nothing: true, status: :no_content
+      else
+        render nothing: true, status: :error
       end
     end
 
     private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_race
       @race = Race.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def race_params
-      params.require(:race).permit(:name, :date, :city, :state, :swim_distance, :swim_units, :bike_distance, :bike_units, :run_distance, :run_units)
+      params.require(:race).permit(:name, :date)
     end
   end
 end
