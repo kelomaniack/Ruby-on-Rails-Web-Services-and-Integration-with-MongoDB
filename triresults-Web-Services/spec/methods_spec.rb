@@ -29,7 +29,7 @@ feature "Module #4 Methods", :type => :routing do
     scenario "POST /api/races creates a new Race in database and satisfies requirements" do 
       expect(j_string = {race: {name:"First Race", date:Date.current.iso8601}}.to_json).to_not be_nil
       page.driver.header('Content-Type', 'application/json')
-      page.driver.header('Accept', 'text/plain')
+      page.driver.header('Accept', 'plain/text')
       page.driver.post("/api/races", j_string) 
       expect(page.status_code).to eql(201)
       expect(page.response_headers["Content-Type"]).to include("text/plain")

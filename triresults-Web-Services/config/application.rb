@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module Triresults
   class Application < Rails::Application
+    Mongoid.load!('./config/mongoid.yml')
+    config.eager_load_paths += %W( #{config.root}/app/services )
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -22,10 +24,5 @@ module Triresults
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-
-    # bootstraps mongoid within applications -- like rails console
-    # config/application.rb
-    Mongoid.load!('./config/mongoid.yml')
-    config.eager_load_paths += %W( #{config.root}/app/services )
   end
 end

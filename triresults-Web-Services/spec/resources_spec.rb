@@ -11,15 +11,15 @@ feature "Module #4 Resource Implementation (JSON)", :type => :routing do
     $continue = true
   end
 
-  before :each do
+  before :each do   
     Race.delete_all
     init_complete_race
   end
 
   around  :each do |example|
     if $continue
-      $continue = false
-      example.run
+      $continue = false 
+      example.run 
       $continue = true unless example.exception
     else
       example.skip
@@ -31,15 +31,15 @@ feature "Module #4 Resource Implementation (JSON)", :type => :routing do
   end
 
   context "rq02" do
-    scenario "GET /api/races/:race_id/results/:id returns a specific entrant for a race" do
-      expect(race = Race.past.first).to_not be_nil
+    scenario "GET /api/races/:race_id/results/:id returns a specific entrant for a race" do 
+      expect(race = Race.first).to_not be_nil
       expect(entrant = race.entrants.first).to_not be_nil
-      page.driver.header('Accept', 'application/json')
+      page.driver.header('Accept', 'application/json')  
       page.driver.get("/api/races/#{race.id}/results/#{entrant.id}")
       expect(page.status_code).to eql(200)
       expect(page.response_headers["Content-Type"]).to include("application/json")
       expect(hash = JSON.parse(page.body)).to_not be_nil
-      expect(hash["first_name"]).to eql(entrant.first_name)
+      expect(hash["first_name"]).to eql(entrant.first_name)      
       expect(hash["last_name"]).to eql(entrant.last_name)
       expect(hash["time"]).to eql(format_hours(entrant.secs))
       expect(hash["bib"]).to eql(entrant.bib)
@@ -61,7 +61,7 @@ feature "Module #4 Resource Implementation (JSON)", :type => :routing do
   context "rq03" do
     let(:evt_array) { [:swim, :t1, :bike, :t2, :run] }
     let(:time_array) { [15.minutes, 1.minute, 40.minutes, 40.seconds, 25.minutes]}
-    scenario "PATCH /api/races/:race_id/results/:id accepts race result updates" do
+    scenario "PATCH /api/races/:race_id/results/:id accepts race result updates" do   
       # setup Race with new entrant
       num_entrants = -1
       race = nil
@@ -73,12 +73,12 @@ feature "Module #4 Resource Implementation (JSON)", :type => :routing do
       entrant = race.create_entrant(racer)
       expect(c_values = Entrant.where(id:entrant.id).pluck(:created_at, :updated_at, :secs).flatten).to_not be_nil
       c_updated_time = c_values[1]
-      total_secs = c_values[2] ||= 0.0
+      total_secs = c_values[2] ||= 0
 
       (0..evt_array.length-1).each { |n|
         j_string = {:result=>{evt_array[n]=>time_array[n]}}.to_json
         total_secs = total_secs + time_array[n]
-        expect(:patch => "/api/races/#{race.id}/results/#{entrant.id}").to be_routable
+        expect(:patch => "/api/races/#{race.id}/results/#{entrant.id}").to be_routable  
         page.driver.header('Content-Type', 'application/json')
         page.driver.submit(:patch, "/api/races/#{race.id}/results/#{entrant.id}", j_string)
         expect(page.status_code).to eql 200
@@ -107,19 +107,19 @@ feature "Module #4 Resource Implementation (JSON)", :type => :routing do
   end
 
   context "rq05" do
-    scenario "GET /api/races/:race_id/results returns a race's entrants" do
+    scenario "GET /api/races/:race_id/results returns a race's entrants" do   
       # get an existing race with entrants
       race = Race.first
       entrants = race.entrants
       page.driver.header('Accept', 'application/json')
       page.driver.get("/api/races/#{race.id}/results")
       expect(page.status_code).to eql 200
-      expect(hash = JSON.parse(page.body)).to_not be_nil
+      expect(hash = JSON.parse(page.body)).to_not be_nil    
       expect(hash.count).to eql entrants.count
       #check over hash that all entrants are there
-      entrants.each { |e|
-        e_result = hash.select { |r| e.first_name == r["first_name"]  && e.last_name == r["last_name"]}[0]
-        expect(e_result["first_name"]).to eql(e.first_name)
+      entrants.each { |e| 
+        e_result = hash.select { |r| e.first_name == r["first_name"]  && e.last_name == r["last_name"]}[0] 
+        expect(e_result["first_name"]).to eql(e.first_name)      
         expect(e_result["last_name"]).to eql(e.last_name)
         expect(e_result["time"]).to eql(format_hours(e.secs))
         expect(e_result["bib"]).to eql(e.bib)
@@ -134,17 +134,17 @@ feature "Module #4 Resource Implementation (JSON)", :type => :routing do
         expect(e_result["bike"]).to eql(format_hours(e.bike_secs))
         expect(e_result["mph"]).to eql(format_mph(e.bike_mph))
         expect(e_result["run"]).to eql(format_hours(e.run_secs))
-        expect(e_result["mmile"]).to eql(format_minutes(e.run_mmile))
+        expect(e_result["mmile"]).to eql(format_minutes(e.run_mmile))        
       }
     end
 
-    scenario "GET /api/races/:race_id/results returns nil when race has no entrants" do
+    scenario "GET /api/races/:race_id/results returns nil when race has no entrants" do 
       race = Race.upcoming.first
       expect(race.entrants.count).to eql 0
       page.driver.header('Accept', 'application/json')
       page.driver.get("/api/races/#{race.id}/results")
       expect(page.status_code).to eql 200
-      expect(hash = JSON.parse(page.body)).to_not be_nil
+      expect(hash = JSON.parse(page.body)).to_not be_nil    
       expect(hash.count).to eql 0
       expect(hash.first).to be_nil
     end
