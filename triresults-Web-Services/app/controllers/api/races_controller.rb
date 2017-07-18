@@ -1,7 +1,7 @@
 module Api
   class RacesController < ApplicationController
 
-    rescue_from ActionView::MissingTemplate do |exception|
+  	rescue_from ActionView::MissingTemplate do |exception|
       Rails.logger.debug("Accept:#{request.accept}")
       render plain: "woops: we do not support that content-type[#{request.accept}]", status: :unsupported_media_type
     end
@@ -12,10 +12,10 @@ module Api
         render plain: @msg, status: :not_found
       else
         case request.accept
-          when "application/json" then render json: {"msg" => @msg}, status: :not_found, template: "api/error_msg"
-          else
-            render status: :not_found, template: "api/error_msg"
-        end
+        when "application/json" then render json: {"msg" => @msg}, status: :not_found, template: "api/error_msg"
+        else
+          render status: :not_found, template: "api/error_msg"
+        end        
         Rails.logger.debug("Accept:#{request.accept}")
       end
     end
@@ -40,7 +40,7 @@ module Api
       if !request.accept || request.accept == "*/*"
         if params && params[:race] && params[:race][:name]
           render plain: "#{params[:race][:name]}", status: :ok
-        else
+        else        
           render plain: :nothing, status: :ok
         end
       elsif !request.accept || request.accept != "*/*"

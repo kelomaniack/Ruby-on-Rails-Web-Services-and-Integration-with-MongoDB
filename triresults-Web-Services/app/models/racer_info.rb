@@ -1,6 +1,6 @@
 class RacerInfo
   include Mongoid::Document
-
+  
   field :fn, as: :first_name, type: String
   field :ln, as: :last_name, type: String
   field :g, as: :gender, type: String

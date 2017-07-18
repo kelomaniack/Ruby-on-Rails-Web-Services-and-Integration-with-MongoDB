@@ -1,5 +1,7 @@
 class SwimResult < LegResult
+
   include Mongoid::Document
+
   field :pace_100, type: Float
 
   def calc

@@ -1,7 +1,7 @@
 class Point
-  include Mongoid::Document
-  attr_accessor :longitude, :latitude
 
+  attr_accessor :longitude, :latitude
+  
   def initialize(lng, lat)
     if !lng.nil? && !lat.nil?
       @latitude = lat
@@ -15,24 +15,24 @@ class Point
 
   def self.mongoize(object)
     case object
-      when nil then nil
-      when Point then object.mongoize
-      when Hash then
-        if object[:type]
-          Point.new(object[:coordinates][0], object[:coordinates][1]).mongoize
-        else
-          Point.new(object[:lng], object[:lat]).mongoize
-        end
-      else object
+    when nil then nil
+    when Point then object.mongoize
+    when Hash then
+      if object[:type]
+        Point.new(object[:coordinates][0], object[:coordinates][1]).mongoize
+      else
+      	Point.new(object[:lng], object[:lat]).mongoize
+      end
+    	else object
     end
   end
 
   def self.demongoize hash
     case hash
-      when nil then nil
-      when Hash
+    when nil then nil
+    when Hash
       then Point.new(hash[:coordinates][0], hash[:coordinates][1])
-      else hash
+    else hash
     end
   end
 
@@ -42,5 +42,4 @@ class Point
       else object
     end
   end
-
 end

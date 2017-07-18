@@ -78,7 +78,7 @@ class Race
     entrant.group = get_group(racer)
     events.each do |event|
       if event
-        entrant.send("#{event.name}=", event)
+        entrant.send("#{event.name}=", event)      
       end
     end
     entrant.validate

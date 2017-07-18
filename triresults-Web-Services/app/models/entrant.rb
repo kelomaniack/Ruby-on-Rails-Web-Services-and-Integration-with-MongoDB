@@ -43,14 +43,14 @@ class Entrant
   end
 
   def the_race
-    race.race
+  	race.race
   end
 
   def update_total result
-    self.secs = 0
-    results.each do |t|
-      self.secs = self.secs + t.secs if !t.secs.nil?
-    end
+  	self.secs = 0
+  	results.each do |t|
+  		self.secs = self.secs + t.secs if !t.secs.nil?
+  	end
   end
 
   RESULTS = {"swim" => SwimResult, "t1" => LegResult, "bike" => BikeResult, "t2" => LegResult, "run" => RunResult}

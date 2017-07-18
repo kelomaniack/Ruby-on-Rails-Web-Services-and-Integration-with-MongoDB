@@ -1,7 +1,7 @@
 class LegResult
 
   include Mongoid::Document
-
+  
   field :secs, type: Float
   field :event, type: Event
 
@@ -14,11 +14,11 @@ class LegResult
   end
 
   after_initialize do |doc|
-    doc.calc_ave
+  	doc.calc_ave
   end
 
   def secs= value
-    self[:secs] = value
-    calc_ave
+  	self[:secs] = value
+  	calc_ave
   end
 end

@@ -1,4 +1,5 @@
 class BikeResult < LegResult
+
   include Mongoid::Document
 
   field :mph, type: Float
@@ -13,5 +14,4 @@ class BikeResult < LegResult
 			self.mph = meters.nil? ? nil : calc
 		end
   end
-  
 end
